@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CUSTOM CSS CLASSES */
+/* ======= HEADER =========== */
+.h-80-vh{
+  height: 80vh;
+}
+
+/* EDIT THE ICONS */
+/* ========= HOVER-CONTENT ======== */
+.hover-content:hover{
+    /* opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 10px;
+    transform: translateY(20px);
+    line-height: 1.5em; */
+    /* max-width: 80%; */
+    /* transition:  .18s cubic-bezier(.05,.2,.1,1), transform .18s cubic-bezier(.05,.2,.1,1); */
+}
+
+
+/* GRID LAYOUT  */
+/* ========= GRID LAYOUT ======== */
+.grid-layout-cols{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 290px;
+  gap: 20px;
+}
+
+.grid-col-2{
+  grid-column: span 2;
+}
+
+.grid-row-2{
+  grid-row: span 3;
+}
+
+.grid-col-3{
+  grid-column: span 2;
+}
+
+.grid-row-3{
+  grid-row: span -1;
+}
+
+
+/* IMAGE GRID LAYOUT  */
+/* !====== IMAGE GRID LAYOUT !====== */
+
+
+.bg-container{
+  position: relative;
+  display: inline-block; /* Adjust as needed */
+}
+.bg-container::before {
+  content: "Book now"; /* Empty content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5); /* Darker background color */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition on hover */
+}
+
+/*  */
+.bg-container:hover::before {
+  opacity: 1; /* Show the overlay on hover */
+}
+
+/* Lo */
+.bg-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
