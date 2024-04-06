@@ -59,7 +59,6 @@ body{
 /* IMAGE GRID LAYOUT  */
 /* !====== IMAGE GRID LAYOUT !====== */
 
-
 .bg-container{
   position: relative;
   display: inline-block; /* Adjust as needed */
@@ -93,3 +92,85 @@ body{
   text-align: center;
 }
 
+
+/* Tran */
+/* .jump-btn{
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+} */
+/* 
+@keyframes jump {
+	50% {
+		-webkit-transform: translateY(-30%);
+		transform: translateY(-30%);
+	}
+}
+
+.text-transititon-x:hover {
+  animation: jump 0.5s 1;
+} */
+
+/* 
+.jump-btn:hover .text-transititon-x{
+  transition: white .3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transform: translateX(-10px);
+} */
+
+
+
+/* IMAGE FIXED LAYOUT  */
+/* !====== IMAGE FIXED LAYOUT !====== */
+.fixed{
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+}
+
+/* EDIT THE BG TRANSPARENCY */
+
+/* #EAEAEA */
+.fixed-bg{
+  background-color: #151515;
+  padding: 0;
+  opacity: 1;
+}
+
+.fixed-txt.h-ct a{
+ color: #fff;
+}
+
+/* LINKS */
+.nav-links{
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+}
+
+/* hr{
+  background-color:#EEBC1D ;
+  
+} */
+
+
+/* MAP SECTION LINKS CUSTOM CLASS  */
+/* !====== MAP SECTION LINKS CUSTOM CLASS !====== */
+.text-sm-crs-pb{
+  color: #FFD700;
+  font-size: 20px;
+  padding-top:  0.55rem;
+  cursor: pointer;
+ 
+}
+.crs-li{
+  cursor: pointer;
+  list-style: none;
+  padding-top: 0.55rem;
+}
+
+/* .custom-hr{
+  border: 1px #FFD700;
+  text-decoration: underline;
+  padding-bottom: 23px;
+} */

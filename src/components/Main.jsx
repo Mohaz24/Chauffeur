@@ -14,9 +14,15 @@ import { BsCalendar2Date } from "react-icons/bs";
 import { BsPersonRaisedHand } from "react-icons/bs";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
+import { BsPersonArmsUp } from "react-icons/bs";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
+
+
+// REUSABILITIY
+// import ViewMore from "./Reusability/ViewMore";
 
 import driverImg from '../assets/images/driver.png'
 import seatsImg from '../assets/images/seats-service.png'
@@ -53,18 +59,24 @@ function Main() {
   }
 
   const [on, setOn] = useState(false)
-
+  const [display, setDisplay] = useState("nsw")
+ 
   function toggle(){
     setOn((on) => !on)
+  }
+
+  function showLinks(navLink){
+    setDisplay(navLink)
   }
  
 
   return (
     <main>
-      <section className="bg-gray-100 p-7 ">
+      {/* FIRST SECTION */}
+      <section className="bg-gray-100 p-7 font-[SourceSans3]">
         {/* Edit,refactoring, adjust padding, clean code & creating tailwind custom classes */}
-        <div className="text-center pt-11 pb-5">
-          <h1 className=" font[Roboto] text-blue-500 text-[37.4px] leading-[45.9px]">
+        <div className="text-center pt-8 pb-5">
+          <h1 className=" text-[#FFD700] text-[37.4px] leading-[45.9px]">
             At Your Service
           </h1>
           <p className="mt-5 w-4/6 mx-auto  font-extralight">
@@ -77,54 +89,56 @@ function Main() {
           </p>
         </div>
 
-        <div className="pt-16 flex items-center justify-center">
-          <div className="flex flex-col items-center text-center">
-            <AiOutlineGlobal className="w-[46px] h-[46px] text-blue-500 " />
-            <h2 className="w-3/4 font-semibold pt-10">
+        <div className="py-16 flex items-center justify-center sm:flex ">
+          <div className="flex flex-col grow items-center text-center gap-10">
+            <AiOutlineGlobal className="w-[46px] h-[46px] text-[#FFD700] " />
+            <h2 className="w-3/4 font-semibold ">
               Australia’s Largest Chauffeur Service
             </h2>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <GiGps className="w-[46px] h-[46px] text-blue-500" />
-            <h2 className="w-3/4 font-semibold pt-10">
+          <div className="flex flex-col items-center gap-10">
+            <GiGps className="w-[46px] h-[46px] text-[#FFD700]" />
+            <h2 className="w-3/4 font-semibold ">
               Full GPS Tracking On Vehicles
             </h2>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <FaHeadphones className="w-[46px] h-[46px] text-blue-500" />
-            <h2 className="w-3/4 font-semibold pt-10">
+          <div className="flex  flex-col items-center gap-10">
+            <FaHeadphones className="w-[46px] h-[46px] text-[#FFD700]" />
+            <h2 className="w-3/4 font-semibold ">
               Here To Help 24 Hours A Day
             </h2>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <HiOutlineTrophy className="w-[46px] h-[46px] text-blue-500" />
-            <h2 className="w-3/4 font-semibold pt-10">
+          <div className="flex flex-col items-center gap-10">
+            <HiOutlineTrophy className="w-[46px] h-[46px] text-[#FFD700]" />
+            <h2 className="w-3/4 font-semibold ">
               Over 115 Years Experience
             </h2>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <BsCalendar2Date className="w-[46px] h-[46px] text-blue-500" />
-            <h2 className="w-3/4 font-semibold pt-10">
+          <div className="flex flex-col items-center gap-10">
+            <BsCalendar2Date className="w-[46px] h-[46px] text-[#FFD700]" />
+            <h2 className="w-3/4 font-semibold ">
               Large Events & Conferences Experts
             </h2>
           </div>
 
-          <div className="flex flex-col items-center text-center">
-            <BsPersonRaisedHand className="w-[46px] h-[46px] text-blue-500" />
-            <h2 className="w-3/4 font-semibold pt-10">
+          <div className="flex flex-col items-center gap-10">
+            <BsPersonArmsUp className="w-[46px] h-[46px] text-[#FFD700]" />
+            <h2 className="w-3/4 font-semibold">
               Courteous & Reliable Chauffeurs
             </h2>
           </div>
         </div>
       </section>
 
+
+      {/* Sliders section */}
       <section>
-        <div className="text-center pt-16 ">
-          <h1 className="w-6/12 mx-auto text-blue-500 text-[37.4px] leading-[45.9px] font[Roboto]">
+        <div className="text-center pt-16 font-[SourceSans3]">
+          <h1 className="w-6/12 mx-auto text-[#FFD700] text-[37.4px] leading-[45.9px] font[Roboto]">
             Moving You In Comfort And Style Wherever You Need To Go
           </h1>
           <p className="pt-7 w-3/5 mx-auto font-extralight  ">
@@ -137,50 +151,223 @@ function Main() {
           </p>
         </div>
 
-        <div className="p-12 w-full">
-          <div className="">
+        <div className="p-12 w-full relative ">
+          <div>
             <Slider slides={sliders} />
           </div>
         </div>
       </section>
 
       {/* The third section */}
-      <section className="bg-gray-100">
-      <div className="text-center pt-11 pb-5">
-          <h1 className="w-3/6 mx-auto font[Roboto] text-blue-500 text-[37.4px] leading-[45.9px]">
+      <section className="bg-gray-100 pb-28 md:pb-0">
+      <div className="text-center pt-11 pb-5 font-[SourceSans3]">
+          <h1 className="w-5/6  mx-auto text-[#FFD700] text-[37.4px] leading-[45.9px] md:w-3/6">
             Australia’s Oldest And Only Nationwide Chauffeur Service
           </h1>
-          <p className="pt-7 w-8/12 mx-auto  font-extralight">
+          <p className="pt-7 md:w-8/12 mx-auto  font-extralight">
           With offices around Australia, we keep you moving across the country. Alongside our luxury airport and 
           A to B transfers, we offer tour services to see the sights in style, using one of our suggested 
           itineraries or choosing your own adventure.
           </p>
-          <p className="pt-3  font-extralight">Find out more about our locations and the services on offer.</p>
+          <p className="pt-3 w-4/6 mx-auto font-extralight">Find out more about our locations and the services on offer.</p>
         </div>
 
-        <div className="pt-16">
-           <div style={bgStyles} className="h-64">
-               <div>
-                {/* <Outlet /> */}
-                   {/* <li>Victoria</li>
-                    <li>Queensland</li>
-                    <li>South Australia</li>
-                    <li>Western Australia</li>
-                    <li>Tasmania</li>
-                    <li>Northern Territory</li>
-                    <li>Australia Capital Territory</li>
-                    <li>International</li> */}
-               </div>
+        <div className="pt-10 font-[SourceSans3] md:pt-16">
+           <div style={bgStyles} className=" h-[270px]  md:h-[350px]">
+               <nav className="flex flex-col pl-16 ">  
+                    <div className="flex flex-col items-center md:items-start md:flex-row" >
+                     <>
+                     <span className="flex items-center gap-2 cursor-pointer md:hidden">
+                         { display === "nsw" ? "New South Wales" : display === "vic" ? "Victoria" : display === "qs" ? "Queensland" : "International" }
+                        <IoIosArrowDropdown  onClick={() => toggle()}/>
+                      </span>
+                  
+                      <div className={`${on ? "md:block" : "hidden"} list-none md:list-disc md:block`}>
+                      <li className={`${display === "nsw" ? "text-sm-crs-pb" : "crs-li"}`}>
+                        <span onClick={() => showLinks("nsw")} style={{ borderBottom: display === "nsw" ? "1px solid #FFD700" : "none" }}>
+                            New South Wales
+                        </span>
+                      </li>
+            
+                        <li className={`${display === "vic" ? "text-sm-crs-pb" : "crs-li"}`}>
+                           <span onClick={() => showLinks("vic")} style={{ borderBottom: display === "vic" ? "1px solid #FFD700" : "none" }}>
+                             Victoria
+                           </span>
+                        </li>
+                                 
+                        <li className={`${display === "qs" ? "text-sm-crs-pb" : "crs-li"}`}>
+                          <span onClick={() => showLinks("qs")} style={{ borderBottom: display === "qs" ? "1px solid #FFD700" : "none" }}>
+                             Queensland
+                          </span>
+                         </li>     
+            
+                         <li className={`${display === "int" ? "text-sm-crs-pb" : "crs-li"}`}>
+                            <span onClick={() => showLinks("int")} style={{ borderBottom: display === "int" ? "1px solid #FFD700" : "none" }}>
+                             International
+                            </span>
+                        </li>   
+            
+                       </div> 
+                      
+                     </>
+
+
+              {/* Bryon bay */}
+              {
+                      display === "nsw" && <div className="mx-auto pt-10">
+                      <div className="flex items-center justify-between gap-24 text-[15px] pb:2 list-none md:pb-3  md:justfiy-between md:gap-[450px] md:w-[100%] md:h-[100%] ">
+                       <div>
+                       <li className="md:pt-2">Bryon Bay</li>
+                       </div>
+                      
+                       <div>
+                       <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                       </div>
+                 
+
+                      </div>
+                       <hr className="w-[100%] border-[#C1BDBD] mt-2 md:mt-3 md:border-1 md:w-[105%]" />
+
+                       {/* Newcastle */}
+                      
+                       <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none md:pb-3 md:justify-between md:w-[100%] md:h-[105%]" >
+                       <div>
+                       <li className="md:pt-2">Newcastle</li>
+                       </div>
+
+                       <div>
+                       <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                       </div>
+                       
+                      </div>
+                      <hr className="w-[100%] border-[#C1BDBD] mt-1 md:mt-3 md:border-1 md:w-[105%]" />
+                       
+                      {/* SYDNEY */}
+
+                      <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none md:pb-3 md:justify-between md:w-[100%] md:h-[105%]" >
+                       <div>
+                       <li className="md:pt-2">Sydney</li>
+                       </div>
+
+                       <div>
+                       <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                       </div>
+                       
+                      </div>
+                      <hr className="w-[100%] border-[#C1BDBD] mt-1 md:mt-3 md:border-1 md:w-[105%]" />
+
+
+                    </div>
+                   
+                   }
+
+                   
+                   {/* VICTORIA */}
+                   {
+                   
+                   display === "vic" &&  <div className="mx-auto pt-7  ">
+                    <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none md:pb-3  md:gap-[490px] md:w-[100%] md:h-[100%] ">
+                    <li>Melbourne</li>
+                    
+                      <div className="self-start md:self-end mx-auto ">
+                      <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                      </div>
+                
+
+                    </div>
+                      <hr className="w-[100%] border-[#C1BDBD] mt-1 md:mt-3 md:border-1 md:w-[105%]" />
+                    
+                      </div>
+                
+                  }
+
+                  {/* Queensland */}
+
+                  {
+                   
+                   display === "qs" &&  <><div className="mx-auto pt-7  ">
+                    <div className="flex items-center justify-between gap-24 text-[15px] pb:2 list-none md:pb-3  md:justfiy-between md:gap-[450px] md:w-[100%] md:h-[100%] ">
+                       <div>
+                       <li className="md:pt-2">Brisbane</li>
+                       </div>
+                      
+                       <div>
+                       <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                       </div>
+                 
+
+                      </div>
+                      <hr className="w-[100%] border-[#C1BDBD] mt-2 md:mt-3 md:border-1 md:w-[105%]" />
+                   
+
+                      <div className="flex items-center justify-between gap-24 ] text-[15px] pb:2 list-none md:pb-3  md:justfiy-between md:gap-[410px] md:w-[100%] md:h-[100%] ">
+                       <div>
+                       <li className="md:pt-2">Sunshine Coast</li>
+                       </div>
+                      
+                       <div>
+                       <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                       </div>
+                 
+
+                      </div>
+                       <hr className="w-[100%] border-[#C1BDBD] mt-2 md:mt-3 md:border-1 md:w-[105%]" />
+
+                       <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none md:pb-3  md:justfiy-between md:gap-[434px] md:w-[100%] md:h-[100%] ">
+                       <div>
+                       <li className="md:pt-2">Gold Coast</li>
+                       </div>
+                      
+                       <div>
+                       <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                       </div>
+                 
+
+                      </div>
+                       <hr className="w-[100%] border-[#C1BDBD] mt-2 md:mt-3 md:border-1 md:w-[105%]" />
+                    
+                    </div>
+
+                    
+
+                    
+                    
+                    </>
+                
+                  }
+                  {/* INTERNATIONAL */}
+                  
+                  {
+                   
+                   display === "int" &&  <div className="mx-auto pt-7  ">
+                    <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none md:pb-3  md:gap-[490px] md:w-[100%] md:h-[100%] ">
+                    <li>International</li>
+                    
+                      <div className="self-start md:self-end mx-auto ">
+                      <span className="font-semibold underline"><a href="">Read <br className=" md:hidden" /> More</a></span>
+                      </div>
+                
+
+                    </div>
+                      <hr className="w-[100%] border-[#C1BDBD] mt-1 md:mt-3 md:border-1 md:w-[105%]" />
+                    
+                      </div>
+                
+                  }
+                   
+           </div>
+          </nav>
+
            </div>
         </div>
       </section>
-
-      {/* Fourth section */}
+       
+       {/* FIFTH SECTION */}
 
       <section className="pt-16">
          <div className="flex items-start ">
           <div className="text-center">
-          <h1 className="w-[50%] mx-auto text-[37.4px] pl-3 leading-[45.9px] font-[Roboto] text-blue-500 ">Your Luxus Driver: Professional, Experienced, Courteous And Discreet</h1>
+          <h1 className="w-[50%] mx-auto text-[37.4px] pl-3 leading-[45.9px] font-[SourceSans3] text-[#FFD700] ">Your Luxus Driver: Professional, Experienced, Courteous And Discreet</h1>
           <div className="mt-5 mx-auto pt-[10px] p-r[40px] uppercase font-[Roboto] text-white pb-[10px] pl[10px] bg-blue-500 w-1/4 rounded-sm text-center">
             book now
           </div>
@@ -262,7 +449,7 @@ function Main() {
          </section>
 
          {/* Contact us */}
-         <section>
+         <section className="contact-us">
          <div className={`bg-[url(https://images.pexels.com/photos/7877126/pexels-photo-7877126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] bg-cover bg-right h-svh relative`}>
          <div className="w-[520px] h-[720px]  bg-white absolute bottom-14 right-8 ">
               <h1 className="text-center pt-10 font[Roboto] text-[#15093E] font-semibold text-[25px] leading-[45.9px]">Questions? We’re Here To <span className="block">Help!</span></h1>

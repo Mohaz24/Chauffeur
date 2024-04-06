@@ -5,6 +5,9 @@ import paymentImg from '../assets/images/footerImages/payment.png'
 import tours from '../assets/images/footerImages/tours.png'
 import aucruise from '../assets/images/footerImages/aucruise.png'
 import award from '../assets/images/footerImages/award.png'
+// import sustainImg from '../assets/images/footerImages/sustain.png'
+
+import { NavLink } from 'react-router-dom'
 
 
 // FOOTER SVG
@@ -13,49 +16,83 @@ import insta from '../assets/svg/insta.svg'
 import fb from '../assets/svg/fb.svg'
 import goog from '../assets/svg/goog.svg'
 import app from '../assets/svg/app.svg'
-import sustain from '../assets/svg/sustain.svg'
+
+import logoImg from '../assets/svg/logo.svg'
+
+
 
 function Footer() {
   return (
-    <footer  className="bg-[#15093E] p-10 flex  justify-between  gap-8 text-white">
+    <footer className="footer font-[SourceSans3] ">
+      <div className="bg-[#151515] px-10 py-10 flex flex-col items-start flex-wrap justify-between gap-5 md:gap-0 text-white md:flex md:flex-row md:items-start ">
       <div>
-        LOGO
-        <p className="pt-3 text-[14px]">Luxus remains Australia’s only <br />  fully National Chauffeur company <br />
+      <NavLink to="/" className="flex items-center pb-5 gap-0">
+       <img className="pl-0 h-[75px] md:h-[75px] md:w-28 "  src={logoImg} alt="" />
+       <div className="text-[#FFD700] font-[Orbitron] ">
+        <hr />
+        <h2 className="text-[15px] pt-3 md:pt-1 uppercase">Luxus Chauffeur</h2>
+        <hr className="border-[1px] bg-[black] round-xs" />
+        <p className="text-[9px] md:text-xs ">Australia's Chauffeur Service</p>
+       </div>
+      </NavLink>
+        <p className="pl-7 text-[14px] leading-[24px]">Luxus remains Australia’s only <br />  fully National Chauffeur company <br />
         with dedicated  offices in every <br /> major city, with a network of first- <br />class , experienced drivers 
         across <br /> Australia.</p>
+        <div className="flex flex-col pl-7">
+        <img src="https://www.hughes.com.au/wp-content/uploads/2023/08/Group-15-1.svg" alt="sustain" className="w-[150px] h-[150px] mb-0" />
+         <div className="flex items-center gap-2">
+          <img src={tours} alt="nsw" className="w-[50px] h-[50px] mt-0" />
+          <img src={aucruise} alt="cruiseAward"  className="w-[70px] h-[70px] mt-0"  />
+          <img src={award} alt="cruiseAward"  className="w-[70px] h-[70px] mt-0"  />
+         </div>
+         </div>
       </div>
 
-      <div>
-       <h2> QUICK LINKS </h2>
+      <div className="pl-7">
+       <h2 className="pt-6 pb-4 "> QUICK LINKS </h2>
        <nav className="text-[14px]">
         <ul>
-            <li><a href="#" >News & Resources</a></li>
-            <li><a href="#">Airport Meeting Points</a></li>
-            <li><a href="#">Our Popular Routes</a></li>
-            <li><a href="#">Data Retention & Privacy Policy</a></li>
-            <li><a href="#">Terms And Conditions</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Google Playstore</a></li>
-            <li><a href="#">Apple Store</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#" >News & Resources</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Airport Meeting Points</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Our Popular Routes</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Data Retention & Privacy Policy</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Terms And Conditions</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Sitemap</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Google Playstore</a></li>
+            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Apple Store</a></li>
         </ul>
        </nav>
       </div>
 
-      <div>
-       <h2>SECURE PAYMENTS</h2>
-       <img src={paymentImg} alt="" />
-       <div>
-        <h2>LET'S STAY CONNECTED</h2>
-        {/* <img src={link} alt="" />
-        <img src={insta} alt="" />
-        <img src={fb} alt="" /> */}
+      <div className="pl-7 pt-6">
+       <h2 className="pb-4">SECURE PAYMENTS</h2>
+       <img src={paymentImg} alt="cards" className="w-[250px] bg-transparent opacity-1" />
+       <div >
+        <h2 className="pt-3">LET'S STAY CONNECTED</h2>
+         <div className="flex items-center justify-around gap-7 w-[30px] h-[30px] mt-6 cursor-pointer">
+          <img src={link} alt="linkiden" />
+          <img src={fb} alt="facebook" />
+          <img src={insta} alt="instagram" />
+         </div>
        </div>
       </div>
 
-      <div>
-      <h2>DOWNLOAD THE LUXUS APP</h2>
-      <img src={goog} alt="" />
-      <img src={app} alt="" />
+      <div  className="pl-7 pt-6">
+      <h2 className="pb-3">DOWNLOAD THE LUXUS APP</h2>
+      <div className="flex flex-col gap-2 w-[110px] h-[110px] ">
+      <img src="https://www.hughes.com.au/wp-content/uploads/2023/07/w_google-play.svg" alt="google" />
+      <img src="https://www.hughes.com.au/wp-content/uploads/2023/07/w_app-store.svg" alt="app" />
+      </div>
+      </div>
+      </div>
+      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between md:flex-row">
+        <p>© 2024 Luxus - ALL RIGHTS RESERVED</p>
+        <ul className="flex text-white">
+          <li><a href="#">Contact |</a></li>
+          <li><a href="#">Sitemap |</a></li>
+          <li><a href="#">Privacy |</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
       </div>
     </footer>
   )

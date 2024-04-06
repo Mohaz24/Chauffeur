@@ -1,57 +1,111 @@
 const airportNames = [
-    {
-        id: 1,
-        name: "Adelaide Airport Transfers",
-    }, {
-        id: 2,
-        name: "Ballina (Byron Bay) Airport"
-    },
+  {
+    id: 1,
+    name: "Adelaide Airport Transfers",
+  },
+  {
+    id: 2,
+    name: "Ballina (Byron Bay) Airport",
+  },
 
-    {
-        id: 3,
-        name: "Brisbane Airport Transfer",
-    }, {
-        id: 4,
-        name: "Cairns and Port Douglas Airport Transfers"
-    },
+  {
+    id: 3,
+    name: "Brisbane Airport Transfer",
+  },
 
-    {
-        id: 5,
-        name: "Canberra Airport Transfers",
-    }, {
-        id: 6,
-        name: "Darwin Airport Transfers"
-    },
+  {
+    id: 4,
+    name: "Melbourne Airport Transfers",
+  },
 
-    {
-        id: 7,
-        name: "Gold Coast Airport Transfers",
-    }, {
-        id: 8,
-        name: "Hobart Airport Transfers"
-    },
+  {
+    id: 5,
+    name: "Sydney Airport Transfers",
+  },
 
-    {
-        id: 9,
-        name: "Launcestion Airport Transfers",
-    }, {
-        id: 10,
-        name: "Melbourne Airport Transfers"
-    },
+  {
+    id: 6,
+    name: "Airport Meeting Points",
+  },
+];
 
-    {
-        id: 11,
-        name: "Sydney Airport Transfers",
-    }, {
-        id: 12,
-        name: "Sunshine Airport Transfers"
-    },
 
-    {
-        id: 13,
-        name: "Airport Meeting Points"
-    }
+// Locations
+const locations = [
+  {
+    id: 1,
+    name: "Adelaide",
+  },
+  {
+    id: 2,
+    name: "Ballina (Byron Bay)",
+  },
 
-]
+  {
+    id: 3,
+    name: "Brisbane",
+  },
 
-export { airportNames }
+  {
+    id: 4,
+    name: "Melbourne",
+  },
+
+  {
+    id: 5,
+    name: "Sydney",
+  },
+
+  {
+    id: 6,
+    name: "International",
+  },
+];
+
+// Locations
+const services = [
+  {
+    id: 1,
+    name: "Airline & Cruise Crewing",
+  },
+  {
+    id: 2,
+    name: "Chauffeur Service",
+  },
+
+  {
+    id: 3,
+    name: "Conferences & Special Events",
+  },
+
+  {
+    id: 4,
+    name: "Corporate Transfers",
+  },
+
+  {
+    id: 5,
+    name: "Cruise Ship Transfers",
+  },
+
+  {
+    id: 6,
+    name: "International Student Transfers",
+  },
+];
+
+// slidersImages
+// const sliderImages = [
+//   { url: airportImg, title: "airport" },
+//   { url: cruiseImg, title: "cruise" },
+//   { url: corporateImg, title: "corporate" },
+//   { url: confrenceImg, title: "conforence" },
+//   { url: luxuryImg, title: "luxury" },
+//   { url: internationalImg, title: "international" },
+// ];
+
+export { 
+  airportNames, 
+  locations, 
+  services 
+};
