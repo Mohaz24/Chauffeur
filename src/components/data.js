@@ -62,7 +62,7 @@ const locations = [
   },
 ];
 
-// Locations
+// services
 const services = [
   {
     id: 1,
@@ -94,6 +94,66 @@ const services = [
   },
 ];
 
+
+// Executive Sedans
+// Premium Sedans
+// Premium SUVs
+// People Movers
+// Luxury Minibuses
+// Coaches
+
+
+// Fleet
+const fleet = [
+  {
+    id: 1,
+    name: "Executive Sedans",
+  },
+  {
+    id: 2,
+    name: "Premium Sedans",
+  },
+
+  {
+    id: 3,
+    name: "Premium SUVs",
+  },
+
+  {
+    id: 4,
+    name: "Luxury Minibuses",
+  },
+
+  {
+    id: 5,
+    name: "Coaches",
+  }
+];
+
+// About us
+
+
+const about = [
+  {
+    id: 1,
+    name: "FAQs",
+  },
+  {
+    id: 2,
+    name: "Chauffeur Services",
+  },
+
+  {
+    id: 3,
+    name:"Our Policies",
+  },
+
+  {
+    id: 4,
+    name: "Careers",
+  }
+];
+
 // slidersImages
 // const sliderImages = [
 //   { url: airportImg, title: "airport" },
@@ -107,5 +167,7 @@ const services = [
 export { 
   airportNames, 
   locations, 
-  services 
+  services,
+  fleet,
+  about
 };

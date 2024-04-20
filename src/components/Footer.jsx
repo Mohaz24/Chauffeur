@@ -24,13 +24,14 @@ import logoImg from '../assets/svg/logo.svg'
 function Footer() {
   return (
     <footer className="footer font-[SourceSans3] ">
-      <div className="bg-[#151515] px-10 py-10 flex flex-col items-start flex-wrap justify-between gap-5 md:gap-0 text-white md:flex md:flex-row md:items-start ">
+      <div className="bg-[#151515] px-10 py-10 flex flex-col items-start  justify-between gap-5 text-white f-g-2 
+      sm:grid sm:grid-cols-2 lg:gap-0 lg:flex lg:flex-row lg:items-start ">
       <div>
-      <NavLink to="/" className="flex items-center pb-5 gap-0">
-       <img className="pl-0 h-[75px] md:h-[75px] md:w-28 "  src={logoImg} alt="" />
+      <NavLink to="/" className="flex  items-center pb-5 gap-0">
+       <img className="pl-0 h-[75px] lg:h-[75px] md:w-28 "  src={logoImg} alt="" />
        <div className="text-[#FFD700] font-[Orbitron] ">
         <hr />
-        <h2 className="text-[15px] pt-3 md:pt-1 uppercase">Luxus Chauffeur</h2>
+        <h2 className="text-[15px] pt-1 pb-1 md:pt-1 uppercase">Luxus Chauffeur</h2>
         <hr className="border-[1px] bg-[black] round-xs" />
         <p className="text-[9px] md:text-xs ">Australia's Chauffeur Service</p>
        </div>
@@ -52,14 +53,14 @@ function Footer() {
        <h2 className="pt-6 pb-4 "> QUICK LINKS </h2>
        <nav className="text-[14px]">
         <ul>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#" >News & Resources</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Airport Meeting Points</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Our Popular Routes</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Data Retention & Privacy Policy</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Terms And Conditions</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Sitemap</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Google Playstore</a></li>
-            <li  className="pt-3 hover:text-[#CD7F32] "><a href="#">Apple Store</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#" >News & Resources</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Airport Meeting Points</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Our Popular Routes</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Data Retention & Privacy Policy</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Terms And Conditions</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Sitemap</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Google Playstore</a></li>
+            <li  className="pt-3 hover:text-[#FFD700] "><a href="#">Apple Store</a></li>
         </ul>
        </nav>
       </div>
@@ -77,15 +78,15 @@ function Footer() {
        </div>
       </div>
 
-      <div  className="pl-7 pt-6">
+      {/* <div  className="pl-7 pt-6">
       <h2 className="pb-3">DOWNLOAD THE LUXUS APP</h2>
       <div className="flex flex-col gap-2 w-[110px] h-[110px] ">
       <img src="https://www.hughes.com.au/wp-content/uploads/2023/07/w_google-play.svg" alt="google" />
       <img src="https://www.hughes.com.au/wp-content/uploads/2023/07/w_app-store.svg" alt="app" />
       </div>
+      </div> */}
       </div>
-      </div>
-      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between md:flex-row">
+      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between f-p-l sm:flex-row">
         <p>© 2024 Luxus - ALL RIGHTS RESERVED</p>
         <ul className="flex text-white">
           <li><a href="#">Contact |</a></li>

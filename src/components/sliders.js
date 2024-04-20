@@ -6,6 +6,18 @@ import confrenceImg from "../assets/images/sliderImages/confrence.png";
 import luxuryImg from "../assets/images/sliderImages/luxury.png";
 import internationalImg from "../assets/images/sliderImages/international.png";
 
+
+import driverImg from '../assets/images/driver.png'
+import seatsImg from '../assets/images/seats-service.png'
+import connectionImg from '../assets/images/connection.png'
+import transportImg from '../assets/images/transport-car.png'
+import interImg from '../assets/images/inter.png'
+import serviceImg from '../assets/images/service.png'
+
+
+
+
+
 // Sliders svg
 import plane from "../assets/svg/plane.svg";
 import ship from "../assets/svg/ship.svg";
@@ -14,18 +26,18 @@ import conference from "../assets/svg/conference.svg";
 import luxury from "../assets/svg/luxury.svg";
 import student from "../assets/svg/student.svg";
 
-// slider data
-const sliderImages = [
+// sliderShow 1
+const sliderImages1 = [
   {
     id:1,
-    url: airportImg,
+    url: `https://images.pexels.com/photos/127905/pexels-photo-127905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2`,
     title: "Airport Transfers",
     text: "Avoid the traffic and taxi queuoes! Allow Luxus to take the stress out of travelling to luxury chauffeur-drive vehicle now.",
     icon: `${plane}`,
   },
   {
     id:2,
-    url: cruiseImg,
+    url: 'https://images.pexels.com/photos/15460411/pexels-photo-15460411/free-photo-of-luxury-cruise-ship-in-sea.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     title: "Cruise Ship Transfers",
     text: "Looking for a convenient and stylish way to travel to or from your cruise ship terminal? Luxus Leisure provides pick ups from cruise ship terminals in every city of Australia.",
     icon: `${ship}`,
@@ -60,4 +72,41 @@ const sliderImages = [
   },
 ];
 
-export default sliderImages;
+
+
+// sliderShow 1
+const sliderImages2 = [
+  {
+    id:1,
+    url: driverImg,
+    title: "Book Now",
+  },
+  {
+    id:2,
+    url: seatsImg,
+    title: "Join Our Team",
+  },
+  {
+    id:3,
+    url: connectionImg,
+    title: "Airline & Cruise Crewing",
+  },
+  {
+    id:4,
+    url: transportImg,
+    title: "Our fleet",
+  },
+  {
+    id:5,
+    url: interImg,
+    title: "The Luxus Experience",
+  },
+  {
+    id:6,
+    url: serviceImg,
+    title: "History Of Luxus",
+  },
+];
+
+
+export {sliderImages1,  sliderImages2};

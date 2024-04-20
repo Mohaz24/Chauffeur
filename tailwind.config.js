@@ -6,9 +6,9 @@ export default {
     ],
     theme: {
       screens: {
-        'sm': '576px',
-        'md': '768px',
-        'lg': '1440px',
+        'sm': '700px',
+        'md': '800px',
+        'lg': '983px',
       },
       extend: {},
     },

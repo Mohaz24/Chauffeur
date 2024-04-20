@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header'
+import Intro from '../Reusebility/Intro'
 import Main from '../Main'
 import Footer from '../Footer'
 import { Outlet } from 'react-router-dom'
@@ -8,8 +8,10 @@ import { Outlet } from 'react-router-dom'
 function Home() {
   return (
     <>
-      <Main />
-      <Footer />
+       <Intro 
+        width={55} 
+        title="At Your Service"  />
+       <Main />
     </>
   )
 }
