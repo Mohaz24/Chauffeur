@@ -27,7 +27,7 @@ function Map(props) {
     <div>
        <section className="bg-gray-100 pb-28 md:pb-20">
       <div className="text-center pt-11 pb-5 font-[SourceSans3]">
-          <h1 className={`w-5/6  mx-auto text-[#FFD700] text-[37.4px] leading-[45.9px] md:w-3/6 md:w-[${props.width}%]`}>
+          <h1 className={`w-5/6  font-black mx-auto text-[#FFD700] text-[37.4px] leading-[45.9px] md:w-3/6 md:w-[${props.width}%]`}>
              {props.title}
           </h1>
           <p className="pt-7 w-3/5 md:w-8/12 mx-auto font-extralight sm:w-4/6">{props.text}</p>

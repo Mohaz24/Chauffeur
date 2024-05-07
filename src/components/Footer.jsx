@@ -14,8 +14,6 @@ import { NavLink } from 'react-router-dom'
 import link from '../assets/svg/link.svg'
 import insta from '../assets/svg/insta.svg'
 import fb from '../assets/svg/fb.svg'
-import goog from '../assets/svg/goog.svg'
-import app from '../assets/svg/app.svg'
 
 import logoImg from '../assets/svg/logo.svg'
 
@@ -25,7 +23,7 @@ function Footer() {
   return (
     <footer className="footer font-[SourceSans3] ">
       <div className="bg-[#151515] px-10 py-10 flex flex-col items-start  justify-between gap-5 text-white f-g-2 
-      sm:grid sm:grid-cols-2 lg:gap-0 lg:flex lg:flex-row lg:items-start ">
+      sm:grid sm:grid-cols-2 lg:gap-0 lg:flex lg:flex-row lg:items-start">
       <div>
       <NavLink to="/" className="flex  items-center pb-5 gap-0">
        <img className="pl-0 h-[75px] lg:h-[75px] md:w-28 "  src={logoImg} alt="" />
@@ -78,15 +76,8 @@ function Footer() {
        </div>
       </div>
 
-      {/* <div  className="pl-7 pt-6">
-      <h2 className="pb-3">DOWNLOAD THE LUXUS APP</h2>
-      <div className="flex flex-col gap-2 w-[110px] h-[110px] ">
-      <img src="https://www.hughes.com.au/wp-content/uploads/2023/07/w_google-play.svg" alt="google" />
-      <img src="https://www.hughes.com.au/wp-content/uploads/2023/07/w_app-store.svg" alt="app" />
       </div>
-      </div> */}
-      </div>
-      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between f-p-l sm:flex-row">
+      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between  sc-t-h  f-p-l sm:flex-row">
         <p>© 2024 Luxus - ALL RIGHTS RESERVED</p>
         <ul className="flex text-white">
           <li><a href="#">Contact |</a></li>

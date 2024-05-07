@@ -3,11 +3,91 @@
 @tailwind utilities;
 
 
+@layer components {
+ 
+
+}
+
 body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden
+}
+
+/*  */
+
+.--el {
+  --i: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 , 17, 18, 19, 20;
+}
+
+.btn:hover i:nth-child(1) { animation-delay: calc(1 * 0.075s); }
+.btn:hover i:nth-child(2) { animation-delay: calc(2 * 0.075s); }
+.btn:hover i:nth-child(3) { animation-delay: calc(3 * 0.075s); }
+.btn:hover i:nth-child(4) { animation-delay: calc(4 * 0.075s); }
+.btn:hover i:nth-child(5) { animation-delay: calc(5 * 0.075s); }
+.btn:hover i:nth-child(6) { animation-delay: calc(6 * 0.075s); }
+.btn:hover i:nth-child(7) { animation-delay: calc(7 * 0.075s); }
+.btn:hover i:nth-child(8) { animation-delay: calc(8 * 0.075s); }
+.btn:hover i:nth-child(9) { animation-delay: calc(9 * 0.075s); }
+.btn:hover i:nth-child(10) { animation-delay: calc(10 * 0.075s); }
+.btn:hover i:nth-child(11) { animation-delay: calc(11 * 0.075s); }
+.btn:hover i:nth-child(12) { animation-delay: calc(12 * 0.075s); }
+.btn:hover i:nth-child(13) { animation-delay: calc(13 * 0.075s); }
+.btn:hover i:nth-child(14) { animation-delay: calc(14 * 0.075s); }
+.btn:hover i:nth-child(15) { animation-delay: calc(15 * 0.075s); }
+.btn:hover i:nth-child(16) { animation-delay: calc(16 * 0.075s); }
+.btn:hover i:nth-child(17) { animation-delay: calc(17 * 0.075s); }
+.btn:hover i:nth-child(18) { animation-delay: calc(18 * 0.075s); }
+.btn:hover i:nth-child(19) { animation-delay: calc(19 * 0.075s); }
+.btn:hover i:nth-child(20) { animation-delay: calc(20 * 0.075s); }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+}
+
+.btn i {
+  font-style: normal;
+}
+
+.btn:hover {
+  animation-name: gradient;
+  animation-duration: 1s;
+}
+
+.btn:hover i {
+  animation-name: jump;
+  animation-duration: 0.5s;
+  animation-delay: calc(var(--i) * 0.075s);
+}
+
+@keyframes gradient {
+  90% {
+      background-color: none;
+  }
+}
+
+@keyframes jump {
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.t-s-e{
+  transition: 0.5s ease-in-out;
+}
+/* TRANSTITONS */
+.tr-s-e:hover{
+  background-color: #161614;
+  transition: background-color 0.4s ease-in-out;
+  opacity: 1;
 }
 
 /* CUSTOM CSS CLASSES */
@@ -17,8 +97,8 @@ body{
 }
 
 
-.darbg-1:hover{
-  text-shadow: 0px 0px 4px #fff 0;
+.darbg-text{
+  /* text-shadow: 0px 0px 4px #fff 0; */
 }
 .darkbg:hover{
   -webkit-transition: all 1s ease;
@@ -28,40 +108,47 @@ body{
   transition: all 1s ease;
   background-color: transparent;
   border: none;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
+.zoom-in:hover{
+  transform: scale(.9);
+}
 
-/* .dark{
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.swiper_container {
+  padding: 0 0;
   position: relative;
 }
 
-.dark::before{
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-  filter: brightness(.4);
-  content: 'Book Now';
-  font-size: 30px;
-
+.swiper-slide {
+  width: 35rem;
+  height: 35rem;
+  position: relative;
 }
- */
 
-/* EDIT THE ICONS */
-/* ========= HOVER-CONTENT ======== */
-.hover-content:hover{
-    /* opacity: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-top: 10px;
-    transform: translateY(20px);
-    line-height: 1.5em; */
-    /* max-width: 80%; */
-    /* transition:  .18s cubic-bezier(.05,.2,.1,1), transform .18s cubic-bezier(.05,.2,.1,1); */
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
 }
+
+.slider-controler {
+  position: relative;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controler .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
 
 
 /* GRID LAYOUT  */
@@ -87,25 +174,6 @@ body{
 .grid-row-3{
   grid-row: span -1;
 }
-
-/* .col-span{
-  grid-column: span 3;
-}
-
-.grid-row-3{
-  grid-row: span -1;
-} */
-
-
-/* .form-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.span-2 {
-  grid-column: span 2;
-} */
 
 
 
@@ -146,31 +214,6 @@ body{
 }
 
 
-/* Tran */
-/* .jump-btn{
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-} */
-/* 
-@keyframes jump {
-	50% {
-		-webkit-transform: translateY(-30%);
-		transform: translateY(-30%);
-	}
-}
-
-.text-transititon-x:hover {
-  animation: jump 0.5s 1;
-} */
-
-/* 
-.jump-btn:hover .text-transititon-x{
-  transition: white .3s;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  transform: translateX(-10px);
-} */
-
 
 
 /* IMAGE FIXED LAYOUT  */
@@ -179,13 +222,13 @@ body{
   position: fixed;
   top: 0;
   left:0;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
 }
 
 /* EDIT THE BG TRANSPARENCY */
 
-/* #EAEAEA */
+
 .fixed-bg{
   background-color: #151515;
   padding: 0;
@@ -202,10 +245,17 @@ body{
   font-weight: 400;
 }
 
-/* hr{
-  background-color:#EEBC1D ;
-  
-} */
+/* ACTIVE LINK */
+.active-links{
+  text-decoration: underline #fff;
+}
+
+.space-y{
+  margin-top: 100px;
+}
+
+
+
 
 
 /* MAP SECTION LINKS CUSTOM CLASS  */
@@ -229,43 +279,6 @@ body{
   content: 'Book Now';
   font-size: 30px;
   color: white;
-}
-
-/* .dark:hover{
-  filter: brightness(.4);
-  content: 'Book Now';
-} */
-
-/* .custom-hr{
-  border: 1px #FFD700;
-  text-decoration: underline;
-  padding-bottom: 23px;
-} */
-
-
-/* SLICK SLIDE CUSTOM CLASS  */
-/* !====== SLICK SLIDE CUSTOM CLASS !====== */
-.slick-slide div{
-  margin: 0 1rem;
-}
-
-.slick-next{
-  right: -40px !important;
-  color: #000
-}
-
-.slick-dots{
-  border: 10px;
-}
-
-.slick-dots li.slick-active button::before{
-  color: #FFD700 !important;
-}
-
-.slick-dots li button::before{
-  color: #000 !important;
-  font-size: 1rem !important;
-  top: 2rem !important;
 }
 
 
@@ -311,7 +324,7 @@ body{
 
    .c-w-btn{
      padding: 8px 9px;
-     width: 70%;
+     width: 50%;
    }
 
    .g-c-1{
@@ -364,7 +377,7 @@ body{
 
   .c-w-btn{
     padding: 8px 9px;
-    width: 70%;
+    width: 40%;
   }
 
   .g-c-1{
@@ -403,7 +416,7 @@ body{
 
   .c-w-btn{
     padding: 8px 9px;
-    width: 70%;
+    width: 40%;
   }
 
   .g-c-1{
