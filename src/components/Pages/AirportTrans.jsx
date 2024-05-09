@@ -3,8 +3,6 @@ import React from 'react'
 
 // SLIDER
 import Carousel from 'react-grid-carousel'
-import "react-multi-carousel/lib/styles.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import { sliderImages1 } from '../sliders';
 
