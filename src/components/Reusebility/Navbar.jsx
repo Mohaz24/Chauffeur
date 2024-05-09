@@ -2,7 +2,6 @@ import {React, useState, useEffect} from 'react'
 
 
 import logoImg from "../../assets/svg/logo.svg";
-import serviceImg from "../../assets/images/service.png";
 
 // Menu Icons
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";

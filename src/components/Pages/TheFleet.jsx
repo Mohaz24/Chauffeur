@@ -1,4 +1,4 @@
-import {React, useState} from 'react'
+import React from 'react'
 
 
 // REUSEABLE COMPONENTS
@@ -7,7 +7,7 @@ import Details from '../Reusebility/Details'
 import BookingDetails from '../Reusebility/BookingDetails'
 import Form from '../Reusebility/Form'
 
-import transport from '../../assets/images/transport-car.png'
+
 
 
 function TheFleet() {

@@ -2,8 +2,6 @@ import {React, useState} from 'react'
 
 import { NavLink } from 'react-router-dom'
 
-import { BsTelephone } from "react-icons/bs";
-
 // Menu Icons
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { CgClose } from "react-icons/cg";

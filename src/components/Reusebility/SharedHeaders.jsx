@@ -3,8 +3,6 @@ import {React, useState, useEffect} from 'react'
 import logoImg from "../../assets/svg/logo.svg";
 
 
-import serviceImg from "../../assets/images/service.png";
-
 // Menu Icons
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
 import { CgClose } from "react-icons/cg";
@@ -209,7 +207,7 @@ function SharedHeaders(props) {
                   <div className="hidden"></div>
                 </div>
               )}
-              
+
             <>
               <div className="text-white  lg:text-xl hover:underline hidden lg:flex ">
                 <NavLink

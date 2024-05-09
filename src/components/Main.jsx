@@ -1,36 +1,23 @@
-import React from "react";
+import {React,  useState } from "react";
 
 
 import Carousel from 'react-grid-carousel'
 import "react-multi-carousel/lib/styles.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/effect-coverflow';
-
-import {  EffectCoverflow, Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 
 
-// import { Outlet } from "react-router-dom";
-import { useState } from "react";
 
 
 // FILES
 import Map from "./Reusebility/Map";
 import Form from "./Reusebility/Form";
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 
 import {sliderImages1, sliderImages2} from "./sliders"

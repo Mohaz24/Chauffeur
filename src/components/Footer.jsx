@@ -5,7 +5,7 @@ import paymentImg from '../assets/images/footerImages/payment.png'
 import tours from '../assets/images/footerImages/tours.png'
 import aucruise from '../assets/images/footerImages/aucruise.png'
 import award from '../assets/images/footerImages/award.png'
-// import sustainImg from '../assets/images/footerImages/sustain.png'
+
 
 import { NavLink } from 'react-router-dom'
 

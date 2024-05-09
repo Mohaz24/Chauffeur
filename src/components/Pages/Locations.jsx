@@ -4,7 +4,6 @@ import React from 'react'
 import Navbar from '../Reusebility/Navbar'
 import Map from '../Reusebility/Map'
 
-// import transport from "../../assets/images/intet"
 
 function Locations() {
   return (
