@@ -1,9 +1,8 @@
 import {React, useState, useEffect} from 'react'
 
+// LOGO
 import logoImg from "../../assets/svg/logo.svg";
 
-
-import serviceImg from "../../assets/images/service.png";
 
 // Menu Icons
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
@@ -17,45 +16,35 @@ import { BsTelephone } from "react-icons/bs";
   
 
 function ServiceHeader(props) {
-    const [isActive, setIsActive] = useState(null);
     const [on, setOn] = useState(false);
 
-   
   
     useEffect(() => {
       const handleScroll = () => {
         const header = document.querySelector(".h-ct");
-        const contactSection = document.querySelector(".sc-t-h");
         const scrollPos = window.scrollY;
-  
-        // Calculate the position where the header should become fixed
-        const contactSectionTop = contactSection.offsetTop - window.innerHeight;
-  
-        if (scrollPos > header.offsetTop && scrollPos < contactSectionTop) {
+        console.log(scrollPos);
+    
+        // Define the specific Y position where the header should stop being fixed
+        const fixedLimit = 6168;
+    
+        if (scrollPos > header.offsetTop && scrollPos < fixedLimit) {
           header.classList.add("fixed", "fixed-bg", "fixed-txt");
         } else {
           header.classList.remove("fixed", "fixed-bg", "fixed-txt");
         }
       };
-  
+    
       window.addEventListener("scroll", handleScroll);
-  
+    
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }, []);
   
-    function toggleOn(navLinks) {
-      setIsActive(navLinks);
-      //  setIsActive(navLinks)
-    }
   
-    function toggleOff() {
-      setIsActive(null);
-    }
-  
-    function toggleNavbar() {
-      setOn((prevOn) => !prevOn);
+    function toggleNavbar(toggle) {
+      setOn(toggle);
     }
 
   return (
@@ -67,7 +56,6 @@ function ServiceHeader(props) {
             backgroundPosition: `${props.bgPosition}`,
             backgroundSize: 'cover',
             objectFit: 'cover',
-            // filter: `brightness(.9)`
           }
       }
         className={`h-[107vh] relative  md:bg-${props.bgPosition}  sm:h-[95vh] md:h-[110vh] lg:h-[115vh]`}
@@ -124,21 +112,23 @@ function ServiceHeader(props) {
                 <hr className="border-[1px] bg-[black] round-xs" />
                 <p className="text-xs">Australia's Chauffeur Service</p>
               </div>
+            </NavLink>
 
               {/* MOBILE NAVBAR */}
-              {on ? (
-                <div className= "lg:hidden">
-                  <CgClose
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 z-[999]  text-[#fff] w-[25px] h-[25px] 
-                    sm:right-24 sm:top-7 md:right-28 cursor-pointer"
-                  />
+              {on === "open" ? (
+                 <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 animation cursor-pointer"
+                    flex-col items-center gap-10 pt-16 animation cursor-pointer lg-hidden"
                   >
+                  <div className= "lg:hidden">
+                  <CgClose
+                    onClick={() => toggleNavbar("close")}
+                    className={`absolute top-6 right-14  text-[#fff] w-[25px] h-[25px] 
+                    sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
+                  />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
-                    <NavLink
+                      <NavLink
                       to="/accounts"
                       className={({isActive})  => isActive ? "active-links" : ""}
                       >
@@ -151,7 +141,7 @@ function ServiceHeader(props) {
                       >
                       Log in
                       </NavLink>
-
+                       
                       <NavLink
                       to="/join"
                       className={({isActive})  => isActive ? "active-links" : ""}
@@ -210,16 +200,16 @@ function ServiceHeader(props) {
                     </ul>
                   </div>
                 </div>
+                </>
               ) : (
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
+                      onClick={() => toggleNavbar("open")}
+                    className="absolute top-6 right-14 z-[999] cursor-pointer text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>
               )}
-            </NavLink>
 
             <>
               <div className="text-white  lg:text-xl hover:underline hidden lg:flex ">

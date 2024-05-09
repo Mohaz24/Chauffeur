@@ -17,7 +17,7 @@ function TheFleet() {
      <SharedHeaders 
        url="https://images.pexels.com/photos/6920645/pexels-photo-6920645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
        bgPosition="center"
-       height={80}
+       height={100}
        tw={100}
        textW={50}
        title="Our Fleet"

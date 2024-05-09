@@ -282,8 +282,8 @@ function SignIn() {
          {/* SIGN UP */}
 
         {
-            show === "signup" ? <section className="pt-0 font-[SourceSans3] w-[86%] mt-8 mx-auto h-[230vh] border-[1px]  mb-10
-        rounded-sm  sm:h-[235vh] md:h-[175vh] lg:h-[160vh] lg:w-[55%] ">  
+            show === "signup" ? <section className="pt-0  font-[SourceSans3] w-[86%] mt-8 mx-auto h-[230vh] border-[1px]  mb-10
+        rounded-sm  sm:h-[235vh] md:h-[175vh] lg:h-[160vh] lg:w-[45%] ">  
             
             <div className="bg-[#FFD700] mt-0 py-2 px-4 font-black text-center">
             <h2 className="text-md text-white text-[20px]">Client Portal Sign Up</h2>
@@ -296,7 +296,7 @@ function SignIn() {
             <input 
             type="text" 
             className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-             sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px]" 
+             sm:px-[16px] sm:py-[5px] md:px-[11px] md:py-[6px]" 
             />
         </div>
 
@@ -308,7 +308,7 @@ function SignIn() {
             <div>
             <input 
             type="text" 
-            className="w-[40%] border-2 mt-4 px-[9px] py-[3px] rounded-md  border-200 md:py-[10px] md:px-[28px] md:w-[65%]" 
+            className="w-[40%] border-2 mt-4 px-[9px] py-[3px] rounded-md  border-200 md:py-[9px] md:px-[20px] md:w-[65%]" 
             />
             <div>
             <label htmlFor="" className="text-sm">Prefix</label>
@@ -319,7 +319,7 @@ function SignIn() {
             <input 
             type="text" 
             className="w-[65%] border-2 mt-4 px-[9px] py-[3px] rounded-md  border-200  sm:py-[6px]
-            md:py-[10px]  md:px-[90px] lg:w-[30%]" />
+            md:py-[9px] md:px-[10px] lg:w-[80%]" />
             <div>
             <label htmlFor="" className="text-sm">First Name</label>
             </div>
@@ -329,7 +329,7 @@ function SignIn() {
             <input 
             type="text" 
             className="w-[65%] border-2 mt-4 px-[9px] py-[3px] rounded-md  border-200 sm:py-[6px]
-             md:py-[10px] md:px-[90px] lg:w-[30%]" />
+             md:py-[9px] md:px-[10px] lg:w-[80%]" />
             <div>
             <label htmlFor="" className="text-sm">Last Name</label>
             </div>
@@ -342,9 +342,9 @@ function SignIn() {
                 <label htmlFor="" className="text-[19px]">Email*</label>
             </div>
             <input 
-            type="text" 
+            type="email" 
             className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-            sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px] md:w-[80%]" />
+            sm:px-[16px] sm:py-[5px]  md:px-[11px] md:py-[6px] md:w-[80%]" />
         </div>
 
         <div className="pl-4">
@@ -352,9 +352,9 @@ function SignIn() {
                 <label htmlFor="" className="text-[19px]">Confrim Email*</label>
             </div>
             <input 
-            type="text" 
+            type="email" 
             className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-            sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px] md:w-[80%]" />
+            sm:px-[16px] sm:py-[5px]  md:px-[11px] md:py-[6px] md:w-[80%]" />
         </div>
 
         <div className=" pl-4 pt-8 grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -365,17 +365,17 @@ function SignIn() {
             <input 
             type="text" 
             className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-            sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px] lg:px-[90px] lg:w-[80%]" />
+            sm:px-[16px] sm:py-[5px]  md:px-[11px] md:py-[6px] lg:px-[10px] lg:w-[80%]" />
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 sm:pt-0">
             <div>
             <label htmlFor="" className="text-[19px]">Phone</label>
             </div>
             <input 
             type="text" 
             className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-            sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px] lg:px-[90px] lg:w-[80%]" />
+            sm:px-[16px] sm:py-[5px] md:px-[11px] md:py-[6px] lg:px-[10px] lg:w-[80%]" />
             
             </div>
 
@@ -384,9 +384,9 @@ function SignIn() {
             <label htmlFor="" className="text-[19px]">Password*</label>
             </div>
             <input 
-            type="text" 
+            type="password" 
             className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-            sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px] lg:px-[90px] lg:w-[80%]" />
+            sm:px-[16px] sm:py-[5px] md:px-[11px] md:py-[6px] lg:px-[10px] lg:w-[80%]" />
             
             </div>
 
@@ -395,9 +395,9 @@ function SignIn() {
             <label htmlFor="" className="text-[19px]">Confirm Password*</label>
             </div>
             <input 
-            type="text" 
-            className="w-[65%] px-[9px] py-[3px] border-2 mt-4 rounded-md border-200 
-            sm:px-[16px] sm:py-[5px] md:px-[18px] md:py-[9px] lg:px-[90px] lg:w-[80%]" />
+            type="password" 
+            className="w-[65%] px-[9px] py-[3px] text-left border-2 mt-4 rounded-md 
+            sm:px-[16px] sm:py-[5px]  md:px-[11px] md:py-[6px] lg:px-[10px] lg:w-[80%]" />
             
             </div>
            

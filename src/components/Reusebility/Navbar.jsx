@@ -1,7 +1,6 @@
 import {React, useState, useEffect} from 'react'
 
 
-
 import logoImg from "../../assets/svg/logo.svg";
 import serviceImg from "../../assets/images/service.png";
 
@@ -11,22 +10,22 @@ import { CgClose } from "react-icons/cg";
 
 import { NavLink } from "react-router-dom";
 import { BsTelephone } from "react-icons/bs";
-import { IoIosArrowDropdown } from "react-icons/io";
+
 
 function Nav(props) {
-    const [isActive, setIsActive] = useState(null);
     const [on, setOn] = useState(false);
-
+   
+  
     useEffect(() => {
       const handleScroll = () => {
         const header = document.querySelector(".h-ct");
-        const contactSection = document.querySelector(".sc-t-h");
         const scrollPos = window.scrollY;
+        console.log(scrollPos);
     
-        // Calculate the position where the header should become fixed
-        const contactSectionTop = contactSection.offsetTop + contactSection.offsetHeight;
+        // Define the specific Y position where the header should stop being fixed
+        const fixedLimit = 6168;
     
-        if (scrollPos > header.offsetTop && scrollPos < contactSectionTop) {
+        if (scrollPos > header.offsetTop && scrollPos < fixedLimit) {
           header.classList.add("fixed", "fixed-bg", "fixed-txt");
         } else {
           header.classList.remove("fixed", "fixed-bg", "fixed-txt");
@@ -39,21 +38,9 @@ function Nav(props) {
         window.removeEventListener("scroll", handleScroll);
       };
     }, []);
-    
-    
-    
   
-    function toggleOn(navLinks) {
-      setIsActive(navLinks);
-      //  setIsActive(navLinks)
-    }
-  
-    function toggleOff() {
-      setIsActive(null);
-    }
-  
-    function toggleNavbar() {
-      setOn((prevOn) => !prevOn);
+    function toggleNavbar(toggle) {
+      setOn(toggle);
     }
   
   return (
@@ -65,10 +52,9 @@ function Nav(props) {
             backgroundPosition: `${props.bgPosition}`,
             backgroundSize: 'cover',
             objectFit: 'cover',
-            filter: `brightness(.9)`
           }
       }
-        className={`h-[${props.height}vh] relative md:bg-${props.bgPosition} sm:h-[130vh] md:h-[115vh] lg:h-[110vh]`}
+        className={`h-[${props.height}vh] relative md:bg-${props.bgPosition} sm:h-[130vh] md:h-[115vh] lg:h-[115vh]`}
       >
         <div className="bg-[#fff] p-2 bg-opacity-10 md:bg-[#EBE9E9] md:bg-opacity-25 font-[SourceSans3]">
           <nav>
@@ -112,7 +98,8 @@ function Nav(props) {
         <nav className="h-ct">
           <div className="flex items-center gap-10 justify-start pt-2 pb-7 pl-4 relative sm:pl-10 md:pl-16 ">
             <NavLink to="/" className={`flex items-end gap-0 ${(isActive) =>
-                    isActive ? "" : ""}`}>
+             isActive ? "" : ""}`}
+              >
               <img className="h-[60px] md:h-[70px]" src={logoImg} alt="" />
               <div className="text-[#FFD700] font-[Orbitron] ">
                 <hr />
@@ -122,19 +109,22 @@ function Nav(props) {
                 <hr className="border-[1px] bg-[black] round-xs" />
                 <p className="text-xs">Australia's Chauffeur Service</p>
               </div>
+            </NavLink>
 
+            
               {/* MOBILE NAVBAR */}
-              {on ? (
-                <div className= "lg:hidden">
-                  <CgClose
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 z-[999]  text-[#fff] w-[25px] h-[25px] 
-                    sm:right-24 sm:top-7 md:right-28 cursor-pointer"
-                  />
+              {on === "open" ? (
+                 <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 animation cursor-pointer"
+                    flex-col items-center gap-10 pt-16 trans-y cursor-pointer lg-hidden"
                   >
+                  <div className= "lg:hidden">
+                  <CgClose
+                    onClick={() => toggleNavbar("close")}
+                    className={`absolute top-6 right-14  text-[#fff] w-[25px] h-[25px] 
+                    sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
+                  />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
                       <NavLink
                       to="/accounts"
@@ -208,16 +198,16 @@ function Nav(props) {
                     </ul>
                   </div>
                 </div>
+                </>
               ) : (
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
+                    onClick={() => toggleNavbar("open")}
+                    className="absolute top-6 right-14 z-[999] cursor-pointer text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>
               )}
-            </NavLink>
 
             <>
               <div className="text-white  lg:text-xl hover:underline hidden lg:flex ">

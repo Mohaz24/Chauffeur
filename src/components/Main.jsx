@@ -165,19 +165,6 @@ const slideShow1 = sliders1.map((slide) => {
 
 
 
-
-
-// sliders2 Images
-
-// const slideShow2 = sliders2.map((slide) => {
-//      return <div className="font-[SourceSans3] cursor-pointer font-black w-full">
-//       <div className="flex flex-col items-start">
-//           <img src={slide.url} alt="images"  className="w-full h-[70vh] object-cover" />
-//           <h3 className="pt-4 text-[#FFD700]">{slide.title}</h3>
-//           </div>
-//       </div>
-// })
-
 const MyDot = ({ isActive }) => (
   <span
     style={{
@@ -212,10 +199,10 @@ const MyDot = ({ isActive }) => (
         </div>
 
        {/* SLIDER */}
-        <div className="p-12 mt-5 container opacity-1">
+        <div className="p-12 mt-5 opacity-1">
         <Carousel className="" 
               cols={4}
-              gap={8}
+              gap={10}
               hideArrow={true}
               showDots={true}
               loop={'Infinite'}

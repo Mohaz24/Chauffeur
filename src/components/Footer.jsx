@@ -77,7 +77,7 @@ function Footer() {
       </div>
 
       </div>
-      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between  sc-t-h  f-p-l sm:flex-row">
+      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between sc-t-h  f-p-l sm:flex-row">
         <p>© 2024 Luxus - ALL RIGHTS RESERVED</p>
         <ul className="flex text-white">
           <li><a href="#">Contact |</a></li>
