@@ -110,13 +110,12 @@ function Nav(props) {
               </div>
             </NavLink>
 
-            
               {/* MOBILE NAVBAR */}
               {on === "open" ? (
                  <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 trans-y cursor-pointer lg-hidden"
+                    flex-col items-center gap-10 pt-16 animation cursor-pointer lg-hidden"
                   >
                   <div className= "lg:hidden">
                   <CgClose
@@ -201,12 +200,14 @@ function Nav(props) {
               ) : (
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
-                    onClick={() => toggleNavbar("open")}
+                      onClick={() => toggleNavbar("open")}
                     className="absolute top-6 right-14 z-[999] cursor-pointer text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>
               )}
+
+           
 
             <>
               <div className="text-white  lg:text-xl hover:underline hidden lg:flex ">
