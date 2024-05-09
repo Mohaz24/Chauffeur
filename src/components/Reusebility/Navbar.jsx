@@ -110,6 +110,7 @@ function Nav(props) {
               </div>
             </NavLink>
 
+            
               {/* MOBILE NAVBAR */}
               {on === "open" ? (
                  <>
@@ -206,7 +207,6 @@ function Nav(props) {
                   <div className="hidden"></div>
                 </div>
               )}
-
            
 
             <>
