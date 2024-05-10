@@ -1,7 +1,7 @@
 import {React,  useState } from "react";
 
 
-import Carousel from 'react-grid-carousel'
+// import Carousel from 'react-grid-carousel'
 
 
 
@@ -91,7 +91,7 @@ const MyDot = ({ isActive }) => (
         </div>
 
        {/* SLIDER */}
-        <div className="p-12 mt-5 opacity-1">
+        {/* <div className="p-12 mt-5 opacity-1">
         <Carousel className="" 
               cols={4}
               gap={10}
@@ -147,7 +147,7 @@ const MyDot = ({ isActive }) => (
             })
           }
         </Carousel>
-        </div>
+        </div> */}
       </section>
 
       {/* MAP SECTION */}
@@ -193,7 +193,7 @@ const MyDot = ({ isActive }) => (
          </div>
         
         {/* CHAUFFUAR SERVICES  */}
-        <div className="hidden lg:grid">
+        {/* <div className="hidden lg:grid">
         <div className="mt-11 grid-layout-cols cursor-pointer lg:grid">
              <div className="grid-col-3 grid-row-2">
                <img src={driverImg} className="h-svh bg-container object-cover dark relative  cursor-pointer" alt="driver" />
@@ -253,7 +253,7 @@ const MyDot = ({ isActive }) => (
             })
           }
         </Carousel>
-         </div>
+         </div> */}
        
       </section>
 
