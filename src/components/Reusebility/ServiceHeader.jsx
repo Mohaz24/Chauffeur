@@ -128,6 +128,12 @@ function ServiceHeader(props) {
                     sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
                   />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
+                    <NavLink
+                      to="/"
+                      className={({isActive})  => isActive ? "active-links" : ""}
+                      >
+                       Home
+                     </NavLink>
                       <NavLink
                       to="/accounts"
                       className={({isActive})  => isActive ? "active-links" : ""}

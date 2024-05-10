@@ -1,7 +1,7 @@
 import React from 'react'
 
 // FILES
-import Navbar from '../Reusebility/Navbar'
+import ServiceHeader from '../Reusebility/ServiceHeader'
 import Map from '../Reusebility/Map'
 
 
@@ -9,7 +9,7 @@ function Locations() {
   return (
     <div>
       {/* NAV */}
-     <Navbar 
+     <ServiceHeader 
        url="https://images.pexels.com/photos/8425058/pexels-photo-8425058.jpeg"
        bgPosition="center"
        height={100}
