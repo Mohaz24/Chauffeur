@@ -21,9 +21,6 @@ import Form from "./Reusebility/Form";
 
 import {sliderImages1, sliderImages2} from "./sliders"
 
-
-import mapImg from '../assets/images/map.png'
-
 import driverImg from '../assets/images/driver.png'
 import seatsImg from '../assets/images/seats-service.png'
 import connectionImg from '../assets/images/connection.png'
@@ -59,97 +56,6 @@ function showPaymentDetails(navLink){
   setShow(navLink)
 }
   
-  const bgStyles = {
-    backgroundImage: `url(${mapImg})`,
-    backgroundPosition: `90% 90%`,
-    backgroundRepeat: `no-repeat`,
-    backgroundSize: `contain`,
-    backgroundColor: `rgb(242, 243, 244)`
-  }
-
-
-  
-  // Slider1 settings
-  var settings1 = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
-}
-  
-
-
-  // Slider2 settings
-  var settings2 = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 0,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-}
-
-
-// Slider 1
-const slideShow1 = sliders1.map((slide) => {
-  const sldImg = {
-        background: `url(${slide.url})`,
-        width: '80%',
-        height: '75vh',
-        backgroundPosition: 'center',
-        borderRadius: '10px',
-        backgroundSize: 'cover',
-        objectFit: 'cover',
-        padding: '100px',
-        // filter: slide.isTrue ? `brightness(.4)` : ``,
-        // opacity: 10
-  }
-     return <div className="relative font-[SourceSans3] cursor-pointer">
-     <Carousel className="w-[100%]"
-       cols={4}
-       gap={9}
-        >
-      <Carousel.Item>
-      <div style={sldImg} className="darbg-1">
-      <div onMouseEnter={() => toggleOn(slide.id)} onMouseLeave={() => toggleOff(slide.id)} className="">
-        {
-          slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10 opacity-100 darkbg font-semibold">
-          <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
-          <h3 className="pt-4 text-[#FFD700] text-lg darkbg-text opacity-8 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
-          <p className="w-48 pt-4 darkbg-text text-md text-[#E3E9F1] opacity-8 drop-shadow-xl bg-blend-difference "> {slide.text} </p>
-          </div>
-          :  <div className="absolute top-64 left-5 bottom-0">
-           <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
-          <h3 className="text-center pt-4 text-[#FFD700] text-sm md:text-lg">{slide.title}</h3>
-          </div>
-        }
-      </div>
-    </div>
-    </Carousel.Item>
-        </Carousel>
-   
- </div>
-})
-
-
 
 const MyDot = ({ isActive }) => (
   <span

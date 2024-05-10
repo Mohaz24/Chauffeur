@@ -112,10 +112,8 @@ function Nav(props) {
 
             
               {/* MOBILE NAVBAR */}
-              {on === "open" ? (
-                 <>
-                  <div
-                    className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
+              {on === "open" ? ( <div
+                    className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 mx-auto opacity-95 bg-[#ABAE29] flex
                     flex-col items-center gap-10 pt-16 animation cursor-pointer lg-hidden"
                   >
                   <div className= "lg:hidden">
@@ -124,7 +122,7 @@ function Nav(props) {
                     className={`absolute top-6 right-14  text-[#fff] w-[25px] h-[25px] 
                     sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
                   />
-                    <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
+                    <ul className="flex flex-col items-center justify-center gap-2 text-[#fff] text-[18px] z-10">
                       <NavLink
                       to="/accounts"
                       className={({isActive})  => isActive ? "active-links" : ""}
@@ -197,7 +195,6 @@ function Nav(props) {
                     </ul>
                   </div>
                 </div>
-                </>
               ) : (
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
