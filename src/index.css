@@ -507,12 +507,12 @@ body{
    }
 
    .custom-class-pb{
-    padding-bottom:  13rem;
+    padding-bottom: 13rem;
    }
 
    /* FORM */
    .custom-class-bottom{
-    bottom: 1rem;
+    bottom: 0.2rem;
     left: 1.2rem;
    }
    .custom-class-height-form{
