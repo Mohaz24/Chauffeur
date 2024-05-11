@@ -95,14 +95,14 @@ function Nav(props) {
 
         {/* Navbar */}
         <nav className="h-ct">
-          <div className="flex items-center gap-10 justify-start pt-2 pb-7 pl-4 relative sm:pl-10 md:pl-16 ">
+          <div className="flex items-center gap-10 justify-start pt-2 pb-7 pl-4 custom-class-nav relative sm:pl-10 md:pl-16 ">
             <NavLink to="/" className={`flex items-end gap-0 ${(isActive) =>
              isActive ? "" : ""}`}
               >
               <img className="h-[60px] md:h-[70px]" src={logoImg} alt="" />
-              <div className="text-[#FFD700] font-[Orbitron] ">
+              <div className="text-[#FFD700] font-[Orbitron] custom-class-nav-ct ">
                 <hr />
-                <h2 className="md:text-[20px] pt-1 pb-1 uppercase">
+                <h2 className="pt-1 pb-1 uppercase md:text-[20px]">
                   Luxus Chauffeur
                 </h2>
                 <hr className="border-[1px] bg-[black] round-xs" />
@@ -113,13 +113,13 @@ function Nav(props) {
                  <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 animation cursor-pointer lg-hidden"
+                    flex-col items-center gap-10 pt-16  custom-class-trans cursor-pointer lg-hidden"
                   >
                   <div className= "lg:hidden">
                   <CgClose
                     onClick={() => toggleNavbar("close")}
                     className={`absolute top-6 right-14  text-[#fff] w-[25px] h-[25px] 
-                    sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
+                    sm:right-24 sm:top-7 md:right-28 cursor-pointer custom-class-close`}
                   />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
                       <NavLink
@@ -199,7 +199,8 @@ function Nav(props) {
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
                     onClick={() => toggleNavbar("open")}
-                    className="absolute cursor-pointer top-6 right-14 z-[999] text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
+                    className="absolute cursor-pointer top-6 right-14 z-[999] text-white w-[25px] h-[25px] custom-class-open 
+                    sm:right-24 sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>
@@ -293,7 +294,7 @@ function Nav(props) {
         </nav>
         <div className={`text-[#fff] pl-9 pt-6 font-[SourceSans3] sm:pl-14 sm:pt-10  md:pl-20 lg:pl-20 
         md:pt-${props.paddingTopMd}  lg:pt-${props.paddingTopLg}`}>
-          <h1 className={`text-[30px] leading-[1.2] w-[85%] lg:w-[${props.tw}%] font-semibold md:text-[50px] `} >
+          <h1 className={`text-[30px] leading-[1.2] w-[85%]  font-semibold md:text-[50px] lg:w-[${props.tw}%] `} >
             {props.title}
           </h1>
           <p className={`text-[16px] pt-3 w-[65%] lg:w-[${props.textW}]`}>
@@ -315,8 +316,8 @@ function Nav(props) {
                 </a>
               </li>
               <li
-                className={`py-[6px] w-[60%] uppercase bg-transparent border-2 border-white sm:py-[8px] sm:w-[40%] md:py-[11px] md:w-[25%]
-                lg:pt-[10px] lg:w-[20%] rounded text-center ${props.hidden}`}>
+                className={`py-[6px] w-[60%] uppercase bg-transparent border-2 border-white sm:py-[8px] sm:w-[40%] 
+                md:py-[11px] md:w-[25%] lg:pt-[10px] lg:w-[20%] rounded text-center ${props.hidden}`}>
                 <a href="" className="btn">
                 <i className="el">M</i>
                 <i className="el">a</i>
@@ -337,7 +338,7 @@ function Nav(props) {
                 </a>
               </li>
               <li
-                className="py-[6px] w-[60%] uppercase bg-transparent border-2 border-white sm:py-[8px] sm:w-[40%] md:py-[11px] md:w-[25%] 
+                className="py-[6px] w-[60%] custom-btn-width uppercase bg-transparent border-2 border-white sm:py-[8px] sm:w-[40%] md:py-[11px] md:w-[25%] 
                 lg:pt-[10px] lg:w-[20%] rounded text-center"
               >
                 <a href="" className="btn">

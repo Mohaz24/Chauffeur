@@ -13,10 +13,10 @@ function Intro(props) {
     <div>
       <section className="bg-gray-100 p-7 font-[SourceSans3]">
         <div className="text-center pt-8 pb-5">
-          <h1 className={`text-[#FFD700] font-black text-[37.4px] leading-[45.9px] lg:w-[55%] mx-auto`}>
+          <h1 className={`text-[#FFD700] font-black text-[30px]  leading-[45.9px] lg:w-[55%] lg:text-[37.4px] mx-auto`}>
             {props.title}
           </h1>
-          <p className="mt-5 md:w-[85%] lg:w-4/6 mx-auto  font-extralight">{props.info}</p>
+          <p className="mt-5 w-[90%] mx-auto font-extralight md:w-[85%] lg:w-4/6">{props.info}</p>
           <p className="mt-5 lg:w-[60%] mx-auto  font-extralight">{props.details}</p>
         </div>
 

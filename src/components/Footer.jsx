@@ -25,9 +25,9 @@ function Footer() {
       <div className="bg-[#151515] px-10 py-10 flex flex-col items-start  justify-between gap-5 text-white f-g-2 
       sm:grid sm:grid-cols-2 lg:gap-0 lg:flex lg:flex-row lg:items-start">
       <div>
-      <NavLink to="/" className="flex  items-center pb-5 gap-0">
-       <img className="pl-0 h-[75px] lg:h-[75px] md:w-28 "  src={logoImg} alt="" />
-       <div className="text-[#FFD700] font-[Orbitron] ">
+      <NavLink to="/" className="flex items-center custom-class-nav pb-5 gap-0">
+       <img className="pl-0 h-[75px]  custom-class-nav md:w-28 lg:h-[75px]" src={logoImg} alt="" />
+       <div className="text-[#FFD700] font-[Orbitron] custom-class-nav-ct ">
         <hr />
         <h2 className="text-[15px] pt-1 pb-1 md:pt-1 uppercase">Luxus Chauffeur</h2>
         <hr className="border-[1px] bg-[black] round-xs" />
@@ -77,12 +77,12 @@ function Footer() {
       </div>
 
       </div>
-      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between sc-t-h  f-p-l sm:flex-row">
+      <div className="bg-[#FFD700] p-5 flex flex-col gap-4 justify-between sc-t-h f-p-l sm:flex-row">
         <p>© 2024 Luxus - ALL RIGHTS RESERVED</p>
-        <ul className="flex text-white">
-          <li><a href="#">Contact |</a></li>
-          <li><a href="#">Sitemap |</a></li>
-          <li><a href="#">Privacy |</a></li>
+        <ul className="custom-class-flexbox flex text-white">
+          <li><a href="#">Contact <span className="custom-class-hidden">|</span></a></li>
+          <li><a href="#">Sitemap <span className="custom-class-hidden">|</span></a></li>
+          <li><a href="#">Privacy <span className="custom-class-hidden">|</span></a></li>
           <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>

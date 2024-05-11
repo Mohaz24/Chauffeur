@@ -1,7 +1,7 @@
 import {React,  useState } from "react";
 
 
-// import Carousel from 'react-grid-carousel'
+import Carousel from 'react-grid-carousel'
 
 
 
@@ -77,10 +77,10 @@ const MyDot = ({ isActive }) => (
       {/* SLIDERS SECTION */}
       <section className="pb-16">
         <div className="text-center pt-16 font-[SourceSans3]">
-          <h1 className="w-4/6 mx-auto font-black text-[#FFD700] text-[37.4px] leading-[45.9px] font[Roboto] md:w-6/12">
+          <h1 className="w-4/6 mx-auto font-black text-[#FFD700] text-[30px] leading-[45.9px]  md:w-6/12 sm:text-[37.4px]">
             Moving You In Comfort And Style Wherever You Need To Go
           </h1>
-          <p className="pt-7 w-3/5 mx-auto font-extralight">
+          <p className="pt-7 w-[80%] mx-auto font-extralight sm:w-3/5 ">
             Whether you are looking to get to and from the airport, rushing
             between business meetings, travelling with the family, or simply
             looking for reliable, comfortable transport for your everyday needs,
@@ -91,7 +91,7 @@ const MyDot = ({ isActive }) => (
         </div>
 
        {/* SLIDER */}
-        {/* <div className="p-12 mt-5 opacity-1">
+        <div className="p-12 mt-5 opacity-1">
         <Carousel className="" 
               cols={4}
               gap={10}
@@ -131,12 +131,12 @@ const MyDot = ({ isActive }) => (
         {
           slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10 opacity-100 darkbg font-semibold">
           <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
-          <h3 className="pt-4 text-[#FFD700] text-lg  opacity-8 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
+          <h3 className="pt-4 text-[#FFD700] text-lg font-black  opacity-8 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
           <p className="w-48 pt-4  text-md text-[#E3E9F1] opacity-8 drop-shadow-xl bg-blend-difference "> {slide.text} </p>
           </div>
           :  <div className="absolute top-64 left-5 bottom-0">
            <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
-          <h3 className="text-center pt-4 text-[#FFD700] text-sm md:text-lg">{slide.title}</h3>
+          <h3 className="text-center pt-4  font-black text-[#FFD700] text-sm md:text-lg">{slide.title}</h3>
           </div>
         }
       </div>
@@ -147,7 +147,7 @@ const MyDot = ({ isActive }) => (
             })
           }
         </Carousel>
-        </div> */}
+        </div>
       </section>
 
       {/* MAP SECTION */}
@@ -166,7 +166,7 @@ const MyDot = ({ isActive }) => (
       <section className="pt-16 font-[SourceSans3] ">
          <div className="flex flex-col items-start justify-center md:flex-row ">
           <div>
-          <h1 className="w-[90%] text-[37.4px] pl-14 leading-[45.9px] font-[SourceSans3] text-[#FFD700] font-black">
+          <h1 className="w-[90%] text-[30px] pl-14 leading-[45.9px] font-[SourceSans3] text-[#FFD700] font-black lg:text-[37.4px]">
             Your Luxus Driver: Professional, Experienced, Courteous And Discreet
           </h1>
           <div className="mt-9 ml-14 pt-[10px] p-r[40px] uppercase font-[SourceSans3] text-white pb-[10px]  
@@ -185,7 +185,7 @@ const MyDot = ({ isActive }) => (
           
           </div>
             <div>
-            <p className="pt-6 pl-14 w-10/12 text-[15px] font-extralight leading-24 md:pt-2 ">We handpick our drivers for their exemplary 
+            <p className="pt-6 pl-14 w-[90%] text-[15px] font-extralight leading-24 md:pt-2 md:w-10/12 ">We handpick our drivers for their exemplary 
             driving records, experience with  luxury service and commitment to customer service and safety. Your Luxus driver will  
             tailor your experience to your needs,  whether that’s  sharing local knowledge or giving you the privacy, peace and quiet to relax in 
             comfort and style. </p>
@@ -193,7 +193,7 @@ const MyDot = ({ isActive }) => (
          </div>
         
         {/* CHAUFFUAR SERVICES  */}
-        {/* <div className="hidden lg:grid">
+        <div className="hidden lg:grid">
         <div className="mt-11 grid-layout-cols cursor-pointer lg:grid">
              <div className="grid-col-3 grid-row-2">
                <img src={driverImg} className="h-svh bg-container object-cover dark relative  cursor-pointer" alt="driver" />
@@ -253,22 +253,22 @@ const MyDot = ({ isActive }) => (
             })
           }
         </Carousel>
-         </div> */}
+         </div>
        
       </section>
 
       {/* The fifth section */}
        <section className="mt-0 font-[SourceSans3]">
-            <div className={`bg-[url(https://www.luxcar.com.au/DynamicImages/Blog/1022/parcel-delivery.jpg)] mt-24 bg-[#151515] text-white
-             bg-cover bg-bottom object-cover h-[80vh] sm:h-[70vh] md:h-[65vh]`}>
+            <div className={`bg-[url(https://www.luxcar.com.au/DynamicImages/Blog/1022/parcel-delivery.jpg)] mt-24 bg-[#151515] 
+            text-white bg-cover bg-bottom object-cover custom-class-height h-[80vh] sm:h-[70vh] md:h-[65vh]`}>
             <div className="pt-11 sm:pt-5">
-              <h2 className="text-center font-black w-3/6  mx-auto  text-[#FFD700] text-[25px] leading-[45.9px] md:pt-16 md:text-[37.4px]">
+              <h2 className="text-center font-black w-3/6 mx-auto  text-[#FFD700] text-[25px] leading-[45.9px] md:pt-16 md:text-[37.4px]">
                 Make Your Next Journey Stress-Free With Luxus
               </h2>
               <p className="mt-5 text-center ">Experience the Luxus difference and take <br className="md:hidden" /> your next journey in comfort and 
               style. Book <br className="md:hidden" /> your car today.</p>
-            <div className="mt-11 mx-auto pt-[10px] pr-[10px] capitalize font-[SourceSans3] text-white pb-[10px] pl[10px] bg-[#FFD700] w-[30%] 
-            rounded-sm text-center sm:w-[20%] md:w-[15%]">  
+            <div className="mt-11 mx-auto pt-[10px] pr-[10px] capitalize font-[SourceSans3] text-white pb-[10px] pl-[10px] bg-[#FFD700] 
+            w-[30%] custom-btn-ad  rounded-sm text-center sm:w-[20%] md:w-[15%]">  
               <a href="/book" className="btn">
                 <i className="el">B</i>
                 <i className="el">o</i>
@@ -287,11 +287,12 @@ const MyDot = ({ isActive }) => (
          {/* FAQ */}
          <section className="bg-gray-100 mt-0 p-20  ">
             <div className="text-center">
-               <h1 className="font-[SourceSans3] font-semibold text-[#FFD700] text-[37.4px] leading-[45.9px]">FAQ</h1>
+               <h1 className="font-[SourceSans3] font-semibold text-[#FFD700] text-[30px] leading-[45.9px] lg:text-[37.4px]">FAQ</h1>
             </div>
             {
-              show === "cap" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3]">
-              <div className="w-full mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in sm:w-10/12 md:text-center md:w-9/11 "> 
+              show === "cap" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] custom-class-trans">
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl 
+              sm:w-10/12 md:text-center md:w-9/11 "> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 
                 md:text-[25px] md:leading-[45.9px] md:w-[63%] lg:w-auto">
@@ -304,7 +305,7 @@ const MyDot = ({ isActive }) => (
                to 12 passengers and for those travelling in a large group, we offer a coach service for up to 54 
                passengers.</p>
             </div> 
-            </div> : <div className="pt-11 w-10/12 mx-auto">
+            </div> : <div className="pt-11 custom-class-width w-10/12 mx-auto">
                   <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
@@ -321,7 +322,8 @@ const MyDot = ({ isActive }) => (
             {/* PAY PAYMENT */}
             {
               show === "pay" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] ">
-              <div className="w-full mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in sm:w-10/12 md:text-center md:w-9/11"> 
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in 
+              sm:w-10/12 md:text-center md:w-9/11"> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 
                 md:text-[25px] md:leading-[45.9px] md:w-[40%] lg:w-auto">
@@ -332,7 +334,7 @@ const MyDot = ({ isActive }) => (
              payment options including credit card, cash and  corporate accounts. Our corporate accounts are typically paid monthly and can be 
              set up  through our website and offer generous corporate rates.</p>
             </div> 
-            </div> : <div className="pt-11 w-10/12 mx-auto">
+            </div> : <div className="pt-11 custom-class-width w-10/12 mx-auto">
                   <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
@@ -350,7 +352,7 @@ const MyDot = ({ isActive }) => (
            {/* CANCEL PAYMENT */}
            
           { show === "cancell" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] t-s-e">
-              <div className="w-full mx-auto py-5 px-4 bg-white text-start shadow-xl sm:w-10/12 md:text-center 
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl sm:w-10/12 md:text-center 
               md:w-9/11"> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 md:w-auto 
@@ -364,7 +366,7 @@ const MyDot = ({ isActive }) => (
              (including passenger no-shows) because it means that the vehicle has been dedicated to you and can no longer be assigned to another Hughes
               passenger. The notice periods differ depending on location, vehicle and event type. View our cancellation policy here.</p>
             </div> 
-            </div> : <div className="pt-11 w-10/12 mx-auto">
+            </div> : <div className="pt-11 custom-class-width w-10/12 mx-auto">
                   <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
@@ -382,7 +384,8 @@ const MyDot = ({ isActive }) => (
            {/* BOOKINGS */}
              
           { show === "book" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] ">
-              <div className="w-full mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in sm:w-10/12 md:text-center md:w-9/11"> 
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in 
+              sm:w-10/12 md:text-center md:w-9/11"> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 
                 md:text-[25px] md:leading-[45.9px] md:w-[40%] lg:w-auto">
@@ -393,7 +396,7 @@ const MyDot = ({ isActive }) => (
              advance gives you more options and certainty that the car type and even driver of your choice will be available at the time you need, 
              but we offer same-day services too.</p>
             </div> 
-            </div> :<div className="pt-11 w-10/12 mx-auto">
+            </div> :<div className="pt-11 custom-class-width w-10/12 mx-auto">
                   <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
@@ -408,9 +411,9 @@ const MyDot = ({ isActive }) => (
             </div>
             }
    
-           <div className="pt-5 pl-6  pb-24 sm:pl-11 sm:pb-28 md:pb-32  lg:pl-1 lg:pb-30 ">
-           <div className="py-[8px] w-[65%] font-[SourceSans3] cursor-pointer mt-10 uppercase text-white bg-[#FFD700] 
-           rounded text-center md:mx-auto md:w-[35%] lg:w-[25%]">
+           <div className="pt-5 pl-6 custom-class-padding-left pb-24 sm:pl-11 sm:pb-28 md:pb-32 lg:pl-1 lg:pb-30 ">
+           <div className="py-[8px] custom-class-btn-width w-[65%] font-[SourceSans3] cursor-pointer mt-10 uppercase text-white 
+           bg-[#FFD700]  rounded text-center md:mx-auto md:w-[35%] lg:w-[25%]">
                 {/* VIEW ALL FAQ'S */}
                 <a href="" className="btn">
                 <i className="el">V</i>

@@ -9,9 +9,10 @@ function Form() {
   return (
     <div>
       <div className={`bg-[url(https://images.pexels.com/photos/8425025/pexels-photo-8425025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)] 
-         bg-cover bg-end object-cover h-[150vh] pb-46 relative  flex items-center c-bg-h sm:bg-right sm:h-[185vh] md:h-[185vh] lg:h-[180vh] `}>
-         <div className=" bg-white absolute bottom-10 right-10 c-w-h pb-28 font-[SourceSans3] sm:bottom-6 sm:right-36 sm:w-[470px]
-         md:w-[490px] md:bottom-16 md:right-[100px] lg:bottom-20 lg:right-4 lg:w-3/6 lg:text-lg">
+         bg-cover bg-end object-cover h-[150vh] pb-46 relative flex items-center c-bg-h  custom-class-height-form sm:bg-right sm:h-[185vh] 
+         md:h-[185vh] lg:h-[180vh] `}>
+         <div className=" bg-white absolute custom-class-bottom bottom-10 right-10 c-w-h pb-28 font-[SourceSans3] sm:bottom-6 sm:right-36 
+         sm:w-[470px] md:w-[490px] md:bottom-16 md:right-[100px] lg:bottom-20 lg:right-4 lg:w-3/6 lg:text-lg">
               <h1 className="text-center pt-4  text-[#FFD700] font-semibold text-[20px] leading-[45.9px]  sm:pt-10 lg:text-[30px]">
                 Questions?  We’re Here To <span className="block">Help!</span></h1>
               <p className="text-sm text-center pt-3 w-[80%] mx-auto lg:text-md lg:w-3/4 lg:mx-auto">Our friendly Customer Service Team is on 

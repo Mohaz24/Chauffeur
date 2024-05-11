@@ -446,3 +446,92 @@ body{
    grid-template-columns: 1fr;
   }
 }
+
+
+
+@media (300px <= width <= 399px) {
+  .custom-class-nav{
+    padding-left: 2px;
+    font-size: 14px;
+  }
+
+  .custom-class-nav img{
+    height: 45px;
+  }
+
+  .custom-class-nav-ct{
+    height: 40px;
+  }
+  .custom-class-open{
+   top: 1rem;
+   right: 0.9rem;
+  }
+
+  .custom-class-close{
+    top: 1rem;
+    right: 0.9rem;
+   }
+
+   /* NAVBAR CONTENT */
+   .custom-btn-width{
+    width: 75%;
+   }
+
+   /* MAP CONTENT */
+   .custom-class-space{
+     gap: 100px;
+   }
+
+   /* AD */
+   .custom-btn-ad{
+     width: 45%;
+   }
+   .custom-class-height{
+    height: 90vh;
+   }
+
+   /* FAQ */
+   .custom-class-width{
+    width: 100%;
+   }
+   .custom-class-card{
+    width: 190%;
+   }
+
+   .custom-class-btn-width {
+      width: 115%;
+   }
+
+   .custom-class-trans{
+    transition: all .5s ease-in-out 0s;
+   }
+
+   .custom-class-pb{
+    padding-bottom:  13rem;
+   }
+
+   /* FORM */
+   .custom-class-bottom{
+    bottom: 1rem;
+    left: 1.2rem;
+   }
+   .custom-class-height-form{
+    height: 220vh;
+   }
+
+   .custom-class-padding-left{
+    padding-left: 0rem;
+   }
+
+   /* FOOTER */
+
+   .custom-class-flexbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+   }
+   .custom-class-hidden{
+    display: none;
+   }
+}

@@ -25,26 +25,26 @@ function Map(props) {
   }
   return (
     <div>
-       <section className="bg-gray-100 pb-28 md:pb-20">
+       <section className="bg-gray-100 pb-36  md:pb-28 lg:pb-20">
       <div className="text-center pt-11 pb-5 font-[SourceSans3]">
-          <h1 className={`w-5/6  font-black mx-auto text-[#FFD700] text-[37.4px] leading-[45.9px] md:w-3/6 md:w-[${props.width}%]`}>
+          <h1 className={`w-5/6  font-black mx-auto text-[#FFD700] text-[30px] leading-[45.9px] md:w-3/6 md:w-[${props.width}%]  lg:text-[37.4px] `}>
              {props.title}
           </h1>
-          <p className="pt-7 w-3/5 md:w-8/12 mx-auto font-extralight sm:w-4/6">{props.text}</p>
+          <p className="pt-7 w-3/5 mx-auto font-extralight sm:w-4/6 md:w-8/12 ">{props.text}</p>
           <p className="pt-3 w-4/6 mx-auto font-extralight">{props.subtitle}</p>
         </div>
 
         <div className="pt-10 font-[SourceSans3] lg:pt-16">
-           <div style={bgStyles} className=" h-[270px] sm:h-[290px] md:h-[350px]">
+           <div style={bgStyles} className="h-[270px] sm:h-[290px] md:h-[350px]">
                <nav className="flex flex-col pl-16">  
-                    <div className="flex flex-col items-center lg:flex-row lg:items-center" >
+                    <div className="flex flex-col items-center lg:flex-row lg:items-start" >
                      <>
                      <span className="flex items-center gap-2 cursor-pointer lg:hidden">
                          { display === "nsw" ? "New South Wales" : display === "vic" ? "Victoria" : display === "qs" ? "Queensland" : "International" }
-                        <IoIosArrowDropdown  onClick={() => toggle()}/>
+                        <IoIosArrowDropdown  onClick={() => toggle()} />
                       </span>
                   
-                      <div className={`${on ? "lg:block" : "hidden"} pt-4 list-none lg:list-disc lg:block`}>
+                      <div className={`${on ? "lg:block" : "hidden"}  list-none lg:list-disc lg:block`}>
                       <li className={`${display === "nsw" ? "text-sm-crs-pb" : "crs-li"} text-start`}>
                         <span onClick={() => showLinks("nsw")} style={{ borderBottom: display === "nsw" ? "1px solid #FFD700" : "none" }}>
                             New South Wales
@@ -77,8 +77,8 @@ function Map(props) {
               {/* Bryon bay */}
               {
                       display === "nsw" && <div className="mx-auto pt-10">
-                      <div className="flex items-center justify-between gap-24 text-[15px] pb:2 list-none lg:pb-3 lg:justfiy-between 
-                      sm:gap-[350px] lg:gap-[450px] lg:w-[100%] lg:h-[100%] ">
+                      <div className="flex items-center justify-between gap-[190px] custom-class-space text-[15px] list-none 
+                      sm:gap-[380px] md:gap-[570px] lg:gap-[490px] lg:w-[100%] lg:pb-3 lg:h-[100%]  lg:justfiy-between">
                        <div>
                        <li className="sm:pb-2 md:pb-4 lg:pt-2">Bryon Bay</li>
                        </div>
@@ -93,8 +93,8 @@ function Map(props) {
 
                        {/* Newcastle */}
                       
-                       <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none lg:pb-3 lg:justify-between
-                        lg:w-[100%] lg:h-[105%]" >
+                       <div className="flex items-center justify-between  pt-2 text-[15px] pb-2 list-none 
+                       lg:w-[100%] lg:h-[105%]" >
                        <div>
                        <li className="sm:pt-2 sm:pb-2 md:pt-4 md:pb-4 lg:pt-2">Newcastle</li>
                        </div>
@@ -108,7 +108,7 @@ function Map(props) {
                        
                       {/* SYDNEY */}
 
-                      <div className="flex items-center justify-between gap-24  text-[15px] pb:2 list-none lg:pb-3 lg:justify-between 
+                      <div className="flex items-center justify-between gap-24  pt-2  text-[15px] pb:2 list-none lg:pb-3 lg:justify-between 
                       lg:w-[100%] lg:h-[105%]" >
                        <div>
                        <li className="sm:pt-2 sm:pb-2 md:pt-4 md:pb-4 lg:pt-2">Sydney</li>
