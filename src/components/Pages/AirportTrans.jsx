@@ -109,7 +109,7 @@ function AirportTrans() {
       </Carousel.Item>
 
       <Carousel.Item>
-      <img src="https://images.pexels.com/photos/8424991/pexels-photo-8424991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      <img src="https://images.pexels.com/photos/8425025/pexels-photo-8425025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
          alt="chauffuar" 
          className="h-[70vh] w-[190%] object-cover"
          />
