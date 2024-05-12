@@ -91,7 +91,7 @@ const MyDot = ({ isActive }) => (
         </div>
 
        {/* SLIDER */}
-        <div className="p-12 mt-5 opacity-1">
+        {/* <div className="p-12 mt-5 opacity-1">
         <Carousel className="" 
               cols={4}
               gap={10}
@@ -147,7 +147,7 @@ const MyDot = ({ isActive }) => (
             })
           }
         </Carousel>
-        </div>
+        </div> */}
       </section>
 
       {/* MAP SECTION */}
@@ -164,7 +164,7 @@ const MyDot = ({ isActive }) => (
        {/* NEWSLETTER SECTION */}
 
       <section className="pt-16 font-[SourceSans3] ">
-         <div className="flex flex-col items-start justify-center md:flex-row ">
+         {/* <div className="flex flex-col items-start justify-center md:flex-row ">
           <div>
           <h1 className="w-[90%] text-[30px] pl-14 leading-[45.9px] font-[SourceSans3] text-[#FFD700] font-black lg:text-[37.4px]">
             Your Luxus Driver: Professional, Experienced, Courteous And Discreet
@@ -190,10 +190,10 @@ const MyDot = ({ isActive }) => (
             tailor your experience to your needs,  whether that’s  sharing local knowledge or giving you the privacy, peace and quiet to relax in 
             comfort and style. </p>
             </div>
-         </div>
+         </div> */}
         
         {/* CHAUFFUAR SERVICES  */}
-        <div className="hidden lg:grid">
+        {/* <div className="hidden lg:grid">
         <div className="mt-11 grid-layout-cols cursor-pointer lg:grid">
              <div className="grid-col-3 grid-row-2">
                <img src={driverImg} className="h-svh bg-container object-cover dark relative  cursor-pointer" alt="driver" />
@@ -253,7 +253,7 @@ const MyDot = ({ isActive }) => (
             })
           }
         </Carousel>
-         </div>
+         </div> */}
        
       </section>
 

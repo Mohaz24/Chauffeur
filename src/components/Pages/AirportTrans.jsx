@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // SLIDER
-import Carousel from 'react-grid-carousel'
+// import Carousel from 'react-grid-carousel'
 
 
 
@@ -61,7 +61,7 @@ function AirportTrans() {
      /> 
 
      {/* SLIDER */}
-     <section className="pt-16 pb-32 font-[SourceSans3]">
+     {/* <section className="pt-16 pb-32 font-[SourceSans3]">
         <h2 className="text-center pt-6 pb-11 text-[#FFD700] font-black text-[37.4px] leading-[45.9px] 
         lg:w-[55%] mx-auto">
          At Your Service
@@ -147,7 +147,7 @@ function AirportTrans() {
             </nav>
         </div>
        </article>
-      </section>
+      </section> */}
 
      {/* BOOKING DETAILS */}
      <BookingDetails 
