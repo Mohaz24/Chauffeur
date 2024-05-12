@@ -15,12 +15,12 @@ function SignIn() {
     const [on, setOn] = useState(false)
     const [show, setShow] = useState("login")
 
-    function toggleNavbar() {
-      setOn((prevOn) => !prevOn);
+    function toggleNavbar(toggle) {
+      setOn(toggle);
     }
 
     function showPage(pages){
-        setShow(pages)
+      setShow(pages)
     }
 
   return (
@@ -32,7 +32,6 @@ function SignIn() {
            backgroundPosition: `left`,
            backgroundSize: 'cover',
            objectFit: 'cover',
-            // filter: `brightness(.9)`
           }
       }
         className={`h-[16vh] relative  sm:h-[20vh] `}
@@ -40,25 +39,26 @@ function SignIn() {
 
         {/* Navbar */}
         <nav className="h-ct">
-          <div className="flex gap-1  pt-2 pb-7 lg:pl-4 relative sm:pl-10 md:pl-16 lg:gap-6  lg:items-center lg:justify-between">
-          {on ? (
-                <div className= "lg:hidden">
-                  <CgClose
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 z-[999]  text-[#fff] w-[25px] h-[25px] 
-                    sm:right-24 sm:top-7 md:right-28 cursor-pointer"
-                  />
+          <div className="flex gap-1 pt-2 pb-7 lg:pl-4 relative sm:pl-10 md:pl-16 lg:gap-6  lg:items-center lg:justify-between">
+           {on === "open" ? (
+                 <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 animation cursor-pointer"
+                    flex-col items-center gap-10 pt-16 animation cursor-pointer lg-hidden"
                   >
+                  <div className= "lg:hidden">
+                  <CgClose
+                    onClick={() => toggleNavbar("close")}
+                    className={`absolute top-6 right-14  custom-class-close text-[#fff] w-[25px] h-[25px] 
+                    sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
+                  />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
-                      <NavLink
+                    <NavLink
                       to="/"
                       className={({isActive})  => isActive ? "active-links" : ""}
                       >
                        Home
-                      </NavLink>
+                     </NavLink>
 
                       <NavLink
                       to="/accounts"
@@ -66,12 +66,12 @@ function SignIn() {
                       >
                        Accounts Applications
                       </NavLink>
-                      
-                      <NavLink
-                      to="/sign"
+
+                        <NavLink
+                      to="/login"
                       className={({isActive})  => isActive ? "active-links" : ""}
                       >
-                       Sign In
+                      Log in
                       </NavLink>
                        
                       <NavLink
@@ -132,15 +132,18 @@ function SignIn() {
                     </ul>
                   </div>
                 </div>
+                </>
               ) : (
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
+                    onClick={() => toggleNavbar("open")}
+                    className="absolute cursor-pointer top-6 right-14 z-[999] custom-class-open text-white w-[25px] h-[25px] sm:right-24 
+                    sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>
               )}
+                 
                        
           <NavLink
              to="/join"
@@ -161,9 +164,9 @@ function SignIn() {
             </NavLink>
 
                  
-            <NavLink to="/" className={`flex items-end gap-0 ${(isActive) => isActive ? "" : ""} pr-0`}>
+            <NavLink to="/" className={`flex items-end gap-0 custom-class-nav ${(isActive) => isActive ? "" : ""} pr-0`}>
               <img className="h-[60px] md:h-[70px]" src={logoImg} alt="logo" />
-              <div className="text-[#FFD700] font-[Orbitron] ">
+              <div className="text-[#FFD700] font-[Orbitron] custom-class-nav-ct  ">
                 <hr />
                 <h2 className="md:text-[20px] pt-1 pb-1 uppercase">
                   Luxus Chauffeur
@@ -197,7 +200,7 @@ function SignIn() {
           <div className="w-[85%] mx-auto mt-14 cursor-pointer  pb-16 mb-29 lg:w-[40%]">
           <a 
           onClick={() => showPage("login")}
-          className="bg-[#FFD700]  text-center text-lg  text-white px-[65px] py-[10px] hover:text-[#000]
+          className="bg-[#FFD700] custom-class-login-padds text-center text-lg  text-white px-[65px] py-[10px] hover:text-[#000]
          sm:ml-24  md:ml-32 lg:ml-0">
             Sign into your Luxus account
           </a>
@@ -261,16 +264,17 @@ function SignIn() {
 
         <div className="pt-8 pl-5 flex items-center gap-5 pb-8">
             <div>
-            <a href="/login" className="bg-[#FFD700] text-white px-[44px] py-[8px] rounded-lg hover:text-[#000] w-[30%]">
-                Login
+            <a href="/login" className="bg-[#FFD700] text-white px-[44px] py-[8px] custom-class-login-padds rounded-lg hover:text-[#000] 
+            w-[30%]">
+              Login
             </a>
             </div>
 
             <div>
             <a  
             onClick={() => showPage("signup")}
-            className="bg-[#FFD700] text-white cursor-pointer px-[44px] py-[8px] rounded-lg hover:text-[#000] w-[30%]"
-            >
+            className="bg-[#FFD700] text-white cursor-pointer px-[44px] py-[8px] custom-class-login-padds rounded-lg hover:text-[#000]
+             w-[30%]" >
                 Sign Up
             </a>
             </div>

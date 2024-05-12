@@ -208,10 +208,6 @@ function Nav(props) {
 
             </NavLink>
 
-            
-            
-           
-
             <>
               <div className="text-white  lg:text-xl hover:underline hidden lg:flex ">
                 <NavLink
@@ -304,7 +300,7 @@ function Nav(props) {
             <ul className="flex flex-col gap-4 font-normal pt-10 sm:pt-6 md:pt-10 md:flex-row md:items-center">
               <li className="py-[6px] w-[55%] uppercase bg-[#FFD700] sm:py-[9px] sm:w-[35%] md:py-[12px] md:w-[20%] 
               lg:pt-[10px] lg:w-[15%] rounded text-center">
-                <a href="" className="btn">
+                <a href="/book" className="btn">
                 <i className="el">B</i>
                 <i className="el">o</i>
                 <i className="el">o</i>

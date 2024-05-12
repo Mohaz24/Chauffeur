@@ -16,8 +16,8 @@ import logoImg from "../../assets/svg/logo.svg";
 function BookNow() {
   const [on, setOn] = useState(false)
 
-  function toggleNavbar() {
-    setOn((prevOn) => !prevOn);
+  function toggleNavbar(toggle) {
+    setOn(toggle);
   }
   return (
     <div>
@@ -27,8 +27,7 @@ function BookNow() {
            background: `url(https://images.pexels.com/photos/7709175/pexels-photo-7709175.jpeg)`,
            backgroundPosition: `left`,
            backgroundSize: 'cover',
-           objectFit: 'cover',
-            // filter: `brightness(.9)`
+           objectFit: 'cover'
           }
       }
         className={`h-[16vh] relative  sm:h-[20vh] `}
@@ -36,25 +35,26 @@ function BookNow() {
 
         {/* Navbar */}
         <nav className="h-ct">
-          <div className="flex   gap-1  pt-2 pb-7 lg:pl-4 relative sm:pl-10 md:pl-16 lg:gap-10  lg:items-center lg:justify-between">
-          {on ? (
-                <div className= "lg:hidden">
-                  <CgClose
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 z-[999]  text-[#fff] w-[25px] h-[25px] 
-                    sm:right-24 sm:top-7 md:right-28 cursor-pointer"
-                  />
+          <div className="flex custom-class-bk-ct gap-1  pt-2 pb-7 lg:pl-4 relative sm:pl-10 md:pl-16 lg:gap-10  lg:items-center lg:justify-between">
+          {on === "open" ? (
+                 <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 animation cursor-pointer"
+                    flex-col items-center gap-10 pt-16 animation cursor-pointer lg-hidden"
                   >
+                  <div className= "lg:hidden">
+                  <CgClose
+                    onClick={() => toggleNavbar("close")}
+                    className={`absolute top-6 right-14  custom-class-close text-[#fff] w-[25px] h-[25px] 
+                    sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
+                  />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
-                      <NavLink
+                    <NavLink
                       to="/"
                       className={({isActive})  => isActive ? "active-links" : ""}
                       >
                        Home
-                      </NavLink>
+                     </NavLink>
 
                       <NavLink
                       to="/accounts"
@@ -62,12 +62,12 @@ function BookNow() {
                       >
                        Accounts Applications
                       </NavLink>
-                      
-                      <NavLink
-                      to="/sign"
+
+                        <NavLink
+                      to="/login"
                       className={({isActive})  => isActive ? "active-links" : ""}
                       >
-                       Sign In
+                      Log in
                       </NavLink>
                        
                       <NavLink
@@ -128,18 +128,20 @@ function BookNow() {
                     </ul>
                   </div>
                 </div>
+                </>
               ) : (
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
-                    onClick={toggleNavbar}
-                    className="absolute top-6 right-14 text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
+                    onClick={() => toggleNavbar("open")}
+                    className="absolute cursor-pointer top-6 right-14 z-[999] custom-class-open text-white w-[25px] h-[25px] sm:right-24 
+                    sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>
               )}
-            <NavLink to="/" className={`flex items-end gap-0 ${(isActive) => isActive ? "" : ""} pr-0`}>
+            <NavLink to="/" className={`flex items-end gap-0 custom-class-nav ${(isActive) => isActive ? "" : ""} pr-0`}>
               <img className="h-[60px] md:h-[70px]" src={logoImg} alt="" />
-              <div className="text-[#FFD700] font-[Orbitron] ">
+              <div className="text-[#FFD700] font-[Orbitron] custom-class-nav-ct">
                 <hr />
                 <h2 className="md:text-[20px] pt-1 pb-1 uppercase">
                   Luxus Chauffeur
@@ -178,7 +180,7 @@ function BookNow() {
           
           {/* FORM */}
           <form action="" className="flex flex-col items-start justify-around font-[SourceSans3] md:flex-row lg:items-center">
-          <div className="pt-6  relative right-28 bottom-1  md:w-[80%]  md:left-2 lg:bottom-0 lg:left-1 lg:pl-6 ">
+          <div className="pt-6 relative right-28 bottom-1 custom-class-bk-pos md:w-[80%]  md:left-2 lg:bottom-0 lg:left-1 lg:pl-6 ">
             <div>
             <label htmlFor="from" className="text-[#FFD700] pb-4">FROM</label>
             </div>
@@ -190,7 +192,7 @@ function BookNow() {
             />
           </div>
 
-          <div className="pt-6 pl-9 md:w-[80%]  relative right-36 bottom-2  md:left-2 lg:bottom-0 lg:left-1">
+          <div className="pt-6 pl-9 md:w-[80%]  relative right-36 bottom-2 custom-class-bk-pos-l  md:left-2 lg:bottom-0 lg:left-1">
             <div>
             <label htmlFor="to" className="text-[#FFD700] pb-4">TO</label>
             </div>
@@ -241,23 +243,23 @@ function BookNow() {
      
      {/* PURCHASE */}
       <section className="pt-16  w-full pb-4 bg-[#D4D4D4] font-[SourceSans3] sm:pt md:pt-10">
-        <div className="flex  flex-col items-center justify-around gap-4 w-full  sm:flex-row md:flex-row ">
-          <button className=" py-[10px] px-[4px] w-[30%] uppercase bg-[#FFD700] text-white cursor-pointer sm:py-[9px] 
-          sm:w-[18%] md:py-[12px] md:w-[20%] lg:pt-[10px] lg:w-[15%] rounded-xl text-center">
+        <div className="flex  flex-col items-center justify-around gap-4 w-full custom-class-book-w  sm:flex-row md:flex-row ">
+          <button className=" py-[10px] px-[4px] w-[30%] uppercase custom-class-book-padds bg-[#FFD700] text-white cursor-pointer 
+          sm:py-[9px]  sm:w-[18%] md:py-[12px] md:w-[20%] lg:pt-[10px] lg:w-[15%] rounded-xl text-center">
            Clear Form
           </button>
      
         
          <div>
-         <a className="py-[6px] w-[55%] uppercase text-black px-10 sm:py-[9px] sm:w-[35%] md:py-[12px] md:w-[20%] 
+         <a className="py-[6px] w-[55%] uppercase custom-class-book-padds text-black px-10 sm:py-[9px] sm:w-[35%] md:py-[12px] md:w-[20%] 
           lg:pt-[10px] lg:w-[20%] rounded-xl mr-5 md:mr-4 text-center text-lg"
           style={{ background: 'linear-gradient(to left, #EAEAEA 60%, #FFF 60%)' }}>
             $ <span>0.00</span>
          </a>
           
 
-         <a href="/services" className="py-[8px] px-[6px] md:px-10  text-sm bg-[#EAEAEA] w-[5%] uppercase text-black sm:py-[11px] 
-         sm:w-[35%] md:py-[12px] md:w-[20%] lg:pt-[10px] lg:w-[20%] rounded-xl text-center">
+         <a href="/services" className="py-[8px] px-[6px] custom-class-book-btn text-sm bg-[#EAEAEA] w-[5%] uppercase
+          text-black sm:py-[11px] sm:w-[35%] md:py-[12px] md:w-[20%] md:px-10  lg:pt-[10px] lg:w-[20%] rounded-xl text-center">
             Continue To Vehicle Selection
          </a>
          </div>

@@ -523,9 +523,29 @@ body{
     padding-left: 0rem;
    }
 
+    /* LOG IN */
+   .custom-class-login-padds{
+    padding: 10px;
+   }
 
+   /* BOOK DETAILS */
+   .custom-class-book-padds{
+    padding: 10px;
+   }
+   .custom-class-bk-pos{
+    right: 50px;
+   }
+
+   .custom-class-book-btn{
+    padding: 10px;
+    width: 20%;
+   }
+
+   .custom-class-bk-pos-l{
+    right: 85px;
+   }
+  
    /* FOOTER */
-
    .custom-class-flexbox{
     display: flex;
     flex-direction: column;
