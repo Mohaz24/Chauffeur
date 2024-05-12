@@ -1,9 +1,7 @@
 import {React,  useState } from "react";
 
-
-import Carousel from 'react-grid-carousel'
-
-
+// SLIDER
+import Flickity from 'react-flickity-component'
 
 
 import { AiOutlinePlusCircle } from "react-icons/ai";
@@ -12,12 +10,10 @@ import { AiOutlineMinusCircle } from "react-icons/ai";
 
 
 
+
 // FILES
 import Map from "./Reusebility/Map";
 import Form from "./Reusebility/Form";
-
-
-
 
 import {sliderImages1, sliderImages2} from "./sliders"
 
@@ -28,9 +24,25 @@ import transportImg from '../assets/images/transport-car.png'
 import interImg from '../assets/images/inter.png'
 import serviceImg from '../assets/images/service.png'
 
+// SLIDERS OPTIONS 1
+const flickityOptions1 = {
+  initialIndex: 2,
+  cellAlign: 'left',
+  freeScroll: true,
+  // wrapAround: true,
+  
+}
+
+// SLIDERS OPTIONS 2
+const flickityOptions2 = {
+  initialIndex: 1,
+  freeScroll: true
+}
+
+
+
 
 function Main() {
-
   const [on, setOn] = useState(false)
   const [show, setShow] = useState("null")
   const [sliders1, setSliders1] = useState(sliderImages1)
@@ -55,21 +67,6 @@ const toggleOff = (id) => {
 function showPaymentDetails(navLink){
   setShow(navLink)
 }
-  
-
-const MyDot = ({ isActive }) => (
-  <span
-    style={{
-      display: 'inline-block',
-      height: isActive ? '10px' : '6px',
-      width: isActive ? '10px' : '6px',
-      background: '#FFD700',
-      marginTop: '3rem',
-      borderRadius: '50px',
-      cursor: 'pointer'
-    }}
-  ></span>
-)
 
   return (
     <main>
@@ -91,23 +88,14 @@ const MyDot = ({ isActive }) => (
         </div>
 
        {/* SLIDER */}
-        {/* <div className="p-12 mt-5 opacity-1">
-        <Carousel className="" 
-              cols={4}
-              gap={10}
-              hideArrow={true}
-              showDots={true}
-              loop={'Infinite'}
-              dot={MyDot}
-              responsiveLayout= {[
-                {
-                  breakpoint: 700,
-                  cols: 4,
-                  rows: 1,
-                  gap: 10,
-                }
-              ]}
-           >
+        <div className="p-12 mt-5 opacity-1">
+        <Flickity
+        className={'carousel'} // default ''
+        elementType={'div'} // default 'div'
+        options={flickityOptions1} // takes flickity options {}
+        disableImagesLoaded={false} // default false
+        static // default false
+        >
           {
             sliders1.map((slide) => {
               const sldImg = {
@@ -122,16 +110,17 @@ const MyDot = ({ isActive }) => (
                 filter: slide.isTrue ? `brightness(.8)` : ``,
                 color: 'white',
                 textShadow: '0px 0px 4px #fff 0',
-                opacity: 2
+                opacity: 1,
+                marginRight: '100px',
+                marginLeft: 'auto'
           }
-         return <Carousel.Item>
-                 <div className="relative font-[SourceSans3] cursor-pointer">
+         return  <div className="relative font-[SourceSans3] cursor-pointer">
                  <div style={sldImg} className="darbg-1 w-[95%] h-[70vh] bg-center">
       <div onMouseEnter={() => toggleOn(slide.id)} onMouseLeave={() => toggleOff(slide.id)} className="">
         {
-          slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10 opacity-100 darkbg font-semibold">
+          slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10 darkbg font-semibold">
           <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
-          <h3 className="pt-4 text-[#FFD700] text-lg font-black  opacity-8 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
+          <h3 className="pt-4 text-[#FFD700] text-lg font-black   opacity-1 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
           <p className="w-48 pt-4  text-md text-[#E3E9F1] opacity-8 drop-shadow-xl bg-blend-difference "> {slide.text} </p>
           </div>
           :  <div className="absolute top-64 left-5 bottom-0">
@@ -142,12 +131,10 @@ const MyDot = ({ isActive }) => (
       </div>
     </div>
     </div>
-  
-        </Carousel.Item>
             })
           }
-        </Carousel>
-        </div> */}
+        </Flickity>
+        </div>
       </section>
 
       {/* MAP SECTION */}
@@ -164,7 +151,7 @@ const MyDot = ({ isActive }) => (
        {/* NEWSLETTER SECTION */}
 
       <section className="pt-16 font-[SourceSans3] ">
-         {/* <div className="flex flex-col items-start justify-center md:flex-row ">
+         <div className="flex flex-col items-start justify-center md:flex-row ">
           <div>
           <h1 className="w-[90%] text-[30px] pl-14 leading-[45.9px] font-[SourceSans3] text-[#FFD700] font-black lg:text-[37.4px]">
             Your Luxus Driver: Professional, Experienced, Courteous And Discreet
@@ -190,10 +177,10 @@ const MyDot = ({ isActive }) => (
             tailor your experience to your needs,  whether that’s  sharing local knowledge or giving you the privacy, peace and quiet to relax in 
             comfort and style. </p>
             </div>
-         </div> */}
+         </div>
         
         {/* CHAUFFUAR SERVICES  */}
-        {/* <div className="hidden lg:grid">
+        <div className="hidden lg:grid">
         <div className="mt-11 grid-layout-cols cursor-pointer lg:grid">
              <div className="grid-col-3 grid-row-2">
                <img src={driverImg} className="h-svh bg-container object-cover dark relative  cursor-pointer" alt="driver" />
@@ -220,40 +207,25 @@ const MyDot = ({ isActive }) => (
         </div>
          
          <div  className="lg:hidden mt-20"> 
-         <Carousel className="" 
-              cols={4}
-              hideArrow={true}
-              loop={'Infinite'}
-              responsiveLayout= {[
-                {
-                  breakpoint: 800,
-                  cols: 1,
-                  rows: 1,
-                  gap: 10,
-                },
-                {
-                  breakpoint: 500,
-                  cols: 1,
-                  rows: 1,
-                  gap: 10,
-                }
-              ]}
-              
-           >
+         <Flickity
+        className={'carousel'} // default ''
+        elementType={'div'} // default 'div'
+        options={flickityOptions2} // takes flickity options {}
+        disableImagesLoaded={false} // default false
+        static // default false
+        >
           {
             sliders2.map((slide) => {
-           return <Carousel.Item>
-          <div className="font-[SourceSans3] cursor-pointer font-black w-full">
+           return <div className="font-[SourceSans3] cursor-pointer font-black w-full">
           <div className="flex flex-col items-start">
             <img src={slide.url} alt="images"  className="w-full h-[70vh] object-cover" />
             <h3 className="pt-4 text-[#FFD700]">{slide.title}</h3>
             </div>
            </div>
-        </Carousel.Item>
             })
           }
-        </Carousel>
-         </div> */}
+        </Flickity>
+         </div>
        
       </section>
 

@@ -2,7 +2,15 @@ import React from 'react'
 
 
 // SLIDER
-// import Carousel from 'react-grid-carousel'
+import Flickity from 'react-flickity-component'
+
+// SLIDER OPTION 
+const flickityOption = {
+  initialIndex: 1,
+  freeScroll: true,
+  wrapAround: true,
+  autoPlay: 1000
+}
 
 
 
@@ -61,60 +69,51 @@ function AirportTrans() {
      /> 
 
      {/* SLIDER */}
-     {/* <section className="pt-16 pb-32 font-[SourceSans3]">
+     <section className="pt-16 pb-32 font-[SourceSans3]">
         <h2 className="text-center pt-6 pb-11 text-[#FFD700] font-black text-[37.4px] leading-[45.9px] 
         lg:w-[55%] mx-auto">
          At Your Service
         </h2>
-       <Carousel className="w-[100%]"
-       cols={3}
-       gap={9}
-       autoplay={3000}
-       loop={true}
-       scrollSnap={true}
-       centerMode={true}
-       swipeable={true}
+        <Flickity
+        className={'carousel'} // default ''
+        elementType={'div'} // default 'div'
+        options={flickityOption} // takes flickity options {}
+        disableImagesLoaded={false} // default false
+        static // default false
         >
-       <Carousel.Item>
        <img src={driver}
          alt="chauffuar" 
          className=" h-[70vh] w-[190%] object-cover cursor-pointer"
          />
-      </Carousel.Item>
-      <Carousel.Item>
+    
       <img src="https://images.pexels.com/photos/8424991/pexels-photo-8424991.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
          alt="chauffuar" 
          className="h-[70vh] w-[190%] object-cover"
          />
-      </Carousel.Item>
-      <Carousel.Item>
+  
+   
       <img src="https://images.pexels.com/photos/8425355/pexels-photo-8425355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
          alt="service" 
          className="h-[70vh] w-[190%] object-cover"
          />
-      </Carousel.Item>
 
-      <Carousel.Item>
+    
       <img src={transport}
          alt="transport" 
          className="h-[70vh] w-[190%] object-cover"
         />
-      </Carousel.Item>
 
-      <Carousel.Item>
       <img src={fleet}
          alt="transport" 
          className="h-[70vh] w-[190%] object-cover"
         />
-      </Carousel.Item>
-
-      <Carousel.Item>
+    
       <img src="https://images.pexels.com/photos/8425025/pexels-photo-8425025.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
          alt="chauffuar" 
          className="h-[70vh] w-[190%] object-cover"
-         />
-      </Carousel.Item>
-       </Carousel>
+        />
+       </Flickity>
+
        <article className="pt-9">
         <div className="w-[85%]  md:w-[73%] mx-auto text-[16px]">
           <h2 className="pt-4 pb-4">Say goodbye to long taxi lines and commence or complete your next trip in comfort and style.
@@ -147,7 +146,7 @@ function AirportTrans() {
             </nav>
         </div>
        </article>
-      </section> */}
+      </section>
 
      {/* BOOKING DETAILS */}
      <BookingDetails 

@@ -20,23 +20,23 @@ function BookingDetails(props) {
     <div>
     <section className={`bg-[#151515] pt-10 pb-36 sm:pb-52 lg:pb-32  font-[SourceSans3]`}>
           <div className="text-center">
-            <h2 className="text-[#FFD700] font-black text-[37.4px] leading-[45.9px]">{props.title}</h2>
+            <h2 className="text-[#FFD700] w-[80%] mx-auto font-black text-[30px] leading-[45.9px] lg:text-[37.4px]">{props.title}</h2>
             <p className="pt-7 w-[73%] mx-auto text-white">{props.info}</p>
-              <p className="pt-9 w-[45%] mx-auto sm:w-[40%] md:w-auto text-white">Not sure what vehicle/s suit your needs? Contact our friendly team 
-              on 1300 615 155 or res@Luxus.com.au.</p>
+              <p className="pt-9 w-[45%] mx-auto sm:w-[40%] md:w-auto text-white">Not sure what vehicle/s suit your needs? Contact our 
+              friendly team  on 1300 615 155 or res@Luxus.com.au.</p>
           </div>
 
           <div className="pt-16 md:pt-10 text-center">
             <h2 className="text-[#FFD700] text-[24px]">Choose Your Destination</h2>
             <div className="">
             {/* locations */}
-              <form action="" className="flex flex-col justify-center items-center gap-3 pt-4 md:pt-2 leading-[24px] md:flex-row md:gap-10">
-               <select name="" id="" className="py-2 text-[#ADA7A7]  w-[80%]  text-start pl-2  rounded-md md:w-[35%]" >
+              <form action="" className="flex flex-col justify-center items-center gap-3  pt-4 md:pt-2 leading-[24px] md:flex-row md:gap-10">
+               <select name="" id="" className="py-2 text-[#ADA7A7] w-[80%] text-start pl-2 cursor-pointer rounded-md md:w-[35%]" >
                 <option value="Select where you coming from?" >Select where you're going from</option>
                 { locations && locations.map((places) => <option value={places}>{`${places.name} Airport`}</option> )}
                </select>
 
-               <select name="" id="" className="py-2 text-[#ADA7A7] w-[80%] text-start  pl-2 rounded-md md:w-[35%]">
+               <select name="" id="" className="py-2 text-[#ADA7A7] w-[80%] text-start  pl-2 cursor-pointer rounded-md md:w-[35%]">
                 <option value="Select where you coming from?">Select where you're going to?</option>
                 { locations && locations.map((places) => <option value={places}>{`${places.name} Airport`}</option> )}
                </select>
@@ -108,8 +108,8 @@ function BookingDetails(props) {
                   <h3>{baglenght}</h3>
                   </div>
                    </div>
-                   <a href="/book" className="mt-10 mx-auto  text-center block w-[35%]  lg:w-[44%] lg:pl-[35px] lg:pr-[35px] py-2
-                    bg-[#FFD700] text-white rounded-sm tr-s-e lg:mt-6 lg:hidden" > 
+                   <a href="/book" className="mt-10 mx-auto  text-center block w-[35%] custom-btn-ad lg:w-[44%] lg:pl-[35px] 
+                   lg:pr-[35px] py-2 bg-[#FFD700] text-white rounded-sm tr-s-e lg:mt-6 lg:hidden" > 
                     Book <br className="hidden md:hidden" /> Now
                     </a>
                   </div>

@@ -98,11 +98,11 @@ function SharedHeaders(props) {
 
         {/* Navbar */}
         <nav className="h-ct">
-          <div className="flex items-center gap-10 justify-start pt-2 pb-7 pl-4 relative sm:pl-10 md:pl-16 ">
+          <div className="flex items-center gap-10 justify-start pt-2 pb-7 pl-4 relative custom-class-nav sm:pl-10 md:pl-16 ">
             <NavLink to="/" className={`flex items-end gap-0 ${(isActive) =>
                     isActive ? "" : ""}`}>
               <img className="h-[60px] md:h-[70px]" src={logoImg} alt="" />
-              <div className="text-[#FFD700] font-[Orbitron] ">
+              <div className="text-[#FFD700] font-[Orbitron] custom-class-nav-ct ">
                 <hr />
                 <h2 className="md:text-[20px] pt-1 pb-1 uppercase">
                   Luxus Chauffeur
@@ -121,7 +121,7 @@ function SharedHeaders(props) {
                   <div className= "lg:hidden">
                   <CgClose
                     onClick={() => toggleNavbar("close")}
-                    className={`absolute top-6 right-14  text-[#fff] w-[25px] h-[25px] 
+                    className={`absolute top-6 right-14  custom-class-close text-[#fff] w-[25px] h-[25px] 
                     sm:right-24 sm:top-7 md:right-28 cursor-pointer`}
                   />
                     <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
@@ -139,7 +139,7 @@ function SharedHeaders(props) {
                        Accounts Applications
                       </NavLink>
 
-                      <NavLink
+                        <NavLink
                       to="/login"
                       className={({isActive})  => isActive ? "active-links" : ""}
                       >
@@ -209,7 +209,7 @@ function SharedHeaders(props) {
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
                     onClick={() => toggleNavbar("open")}
-                    className="absolute cursor-pointer top-6 right-14 z-[999] text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
+                    className="absolute cursor-pointer top-6 right-14 z-[999] custom-class-open text-white w-[25px] h-[25px] sm:right-24 sm:top-7"
                   />
                   <div className="hidden"></div>
                 </div>

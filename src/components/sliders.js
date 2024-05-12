@@ -69,22 +69,7 @@ const sliderImages1 = [
     title: "International Student",
     text: "Luxus offers exceptional-quality international student transfers to universities throughout Australia.",
     icon: `${student}`,
-  },
-  
-  {
-    id:7,
-    url: `${connectionImg}`,
-    title: "Airport Transfers",
-    text: "Avoid the traffic and taxi queuoes! Allow Luxus to take the stress out of travelling to luxury chauffeur-drive vehicle now.",
-    icon: `${plane}`,
-  },
-  {
-    id:8,
-    url: 'https://bloximages.newyork1.vip.townnews.com/guampdn.com/content/tncms/assets/v3/editorial/d/06/d067dd44-aaba-11ee-af2e-a3863293e298/659636a889920.image.jpg?crop=1662%2C873%2C0%2C187&resize=1200%2C630&order=crop%2Cresize',
-    title: "Cruise Ship Transfers",
-    text: "Looking for a convenient and stylish way to travel to or from your cruise ship terminal? Luxus Leisure provides pick ups from cruise ship terminals in every city of Australia.",
-    icon: `${ship}`,
-  },
+  }
 ];
 
 

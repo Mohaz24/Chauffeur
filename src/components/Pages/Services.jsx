@@ -83,10 +83,10 @@ const toggleOff = (id) => {
                    <div style={sldImg} className="darbg-1">
                    <div onMouseEnter={() => toggleOn(slide.id)} onMouseLeave={() => toggleOff(slide.id)} className="">
                      {
-                       slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10 opacity-100 
+                       slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10
                        darkbg font-semibold">
                        <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
-                       <h3 className="pt-4 text-[#FFD700] font-black text-lg darkbg-text opacity-8 drop-shadow-xl bg-blend-difference ">
+                       <h3 className="pt-4 text-[#FFD700] font-black text-lg darkbg-text opacity-1 drop-shadow-xl bg-blend-difference ">
                         {slide.title}</h3>
                        <p className="w-48 pt-4 darkbg-text text-md text-[#E3E9F1] opacity-8 drop-shadow-xl bg-blend-difference">
                         {slide.text} </p>
