@@ -449,7 +449,7 @@ body{
 
 
 
-@media (300px <= width <= 399px) {
+@media (300px <= width <= 414px) {
   .custom-class-nav{
     padding-left: 2px;
     font-size: 14px;

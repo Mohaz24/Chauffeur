@@ -308,7 +308,8 @@ function SharedHeaders(props) {
             <ul className="flex flex-col gap-4 font-normal pt-10 sm:pt-6 sm:flex-row md:pt-10 md:flex-row md:items-center">
             <li className="py-[6px] w-[55%] uppercase bg-[#FFD700] sm:py-[9px] sm:w-[25%] md:py-[12px] md:w-[20%] 
               lg:pt-[10px] lg:w-[15%] rounded text-center">
-                <a href="/book" className="btn">
+                <NavLink to="/book" className="cursor-pointer">
+                <a href="" className="btn">
                 <i className="el">B</i>
                 <i className="el">o</i>
                 <i className="el">o</i>
@@ -318,6 +319,7 @@ function SharedHeaders(props) {
                 <i className="el">o</i>
                 <i className="el">w</i>
                 </a>
+                </NavLink>
               </li>
               <li
                 className="py-[6px] w-[60%] uppercase bg-transparent border-2 border-white sm:py-[8px] sm:w-[30%] md:py-[11px] md:w-[25%] 

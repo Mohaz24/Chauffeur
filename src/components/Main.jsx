@@ -158,16 +158,18 @@ function showPaymentDetails(navLink){
           </h1>
           <div className="mt-9 ml-14 pt-[10px] p-r[40px] uppercase font-[SourceSans3] text-white pb-[10px]  
           cursor-pointer pl-[10px] bg-[#FFD700] w-[35%] rounded-sm text-center">
-            <a href="/book" className="btn">
-            <i className="el">B</i>
-            <i className="el">o</i>
-            <i className="el">o</i>
-            <i className="el">k</i>
+            <NavLink to="/book" className="cursor-pointer">
+                <a href="" className="btn">
+                <i className="el">B</i>
+                <i className="el">o</i>
+                <i className="el">o</i>
+                <i className="el">k</i>
 
-            <i className="el ml-1">N</i>
-            <i className="el">o</i>
-            <i className="el">w</i>
-            </a>
+                <i className="el ml-1">N</i>
+                <i className="el">o</i>
+                <i className="el">w</i>
+                </a>
+              </NavLink>
           </div>
           
           </div>
@@ -241,7 +243,8 @@ function showPaymentDetails(navLink){
               style. Book <br className="md:hidden" /> your car today.</p>
             <div className="mt-11 mx-auto pt-[10px] pr-[10px] capitalize font-[SourceSans3] text-white pb-[10px] pl-[10px] bg-[#FFD700] 
             w-[30%] custom-btn-ad  rounded-sm text-center sm:w-[20%] md:w-[15%]">  
-              <a href="/book" className="btn">
+              <NavLink to="/book" className="cursor-pointer">
+                <a href="" className="btn">
                 <i className="el">B</i>
                 <i className="el">o</i>
                 <i className="el">o</i>
@@ -250,7 +253,8 @@ function showPaymentDetails(navLink){
                 <i className="el ml-1">N</i>
                 <i className="el">o</i>
                 <i className="el">w</i>
-              </a>
+                </a>
+              </NavLink>
             </div>
             </div>
           </div>
