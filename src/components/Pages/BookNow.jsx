@@ -216,7 +216,7 @@ function BookNow() {
             id="date" 
             placeholder="Enter date..."
             onChange={(e) => console.log(e.target.value)}
-            onFocus={(e) => (e.target.type = 'date')}
+            // onFocus={(e) => (e.target.type = 'date')}
             onMouseEnter={(e) => (e.target.type = 'date')}
             onBlur={(e) => (e.target.type = 'text')}
             className="mt-4 w-[90%] text-black bg-white py-[10px] px-5 rounded-xl 
@@ -234,7 +234,7 @@ function BookNow() {
             id="time" 
             placeholder="Enter time..."
             onChange={(e) => console.log(e.target.value)}
-            onFocus={(e) => (e.target.type = 'time')}
+            // onFocus={(e) => (e.target.type = 'time')}
             onMouseEnter={(e) => (e.target.type = 'time')}
             onBlur={(e) => (e.target.type = 'text')}
             className="mt-4 w-[80%] text-black bg-white px-4 py-[10px] rounded-xl placeholder:text-[16px] 
