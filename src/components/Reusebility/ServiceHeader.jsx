@@ -58,7 +58,7 @@ function ServiceHeader(props) {
             objectFit: 'cover',
           }
       }
-        className={`h-[107vh] relative  md:bg-${props.bgPosition}  sm:h-[95vh] md:h-[110vh] lg:h-[115vh]`}
+        className={`h-[${props.height}vh] relative  md:bg-${props.bgPosition}  sm:h-[95vh] md:h-[110vh] lg:h-[115vh]`}
       >
         <div className="bg-[#fff] p-2 bg-opacity-10 md:bg-[#EBE9E9] md:bg-opacity-25 font-[SourceSans3]">
           <nav>
@@ -297,7 +297,7 @@ function ServiceHeader(props) {
             </>
           </div>
         </nav>
-        <div className={`text-[#fff] pl-9 pt-10 font-[SourceSans3] sm:pl-14 md:pl-20 lg:pl-20 sm:pt-10 
+        <div className={`text-[#fff] pl-9 pt-10 pb-16 font-[SourceSans3] sm:pl-14 md:pl-20 lg:pl-20 sm:pt-10 
         md:pt-14  lg:pt-11`}>
           <h1 className={`text-[30px] leading-[1.2] w-[85%] lg:w-[${props.tw}%] font-semibold md:text-[50px] `} >
             {props.title}

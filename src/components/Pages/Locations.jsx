@@ -12,7 +12,7 @@ function Locations() {
      <ServiceHeader 
        url="https://images.pexels.com/photos/8425058/pexels-photo-8425058.jpeg"
        bgPosition="center"
-       height={100}
+       height={105}
        tw={40}
        tws={60}
        textW={50}

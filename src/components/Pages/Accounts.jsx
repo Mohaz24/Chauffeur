@@ -10,7 +10,7 @@ function Accounts() {
     <SharedHeaders 
        url="https://images.pexels.com/photos/8555602/pexels-photo-8555602.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
        bgPosition="center"
-       height={100}
+       height={90}
        tw={100}
        textW={50}
        title="Account Applications"

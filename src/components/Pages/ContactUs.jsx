@@ -21,7 +21,7 @@ function ContactUs() {
       <SharedHeaders 
        url="https://images.pexels.com/photos/8425409/pexels-photo-8425409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
        bgPosition="top"
-       height={80}
+       height={95}
        tw={100}
        textW={50}
        title="Contact Us"
@@ -41,20 +41,22 @@ function ContactUs() {
        o="o"
        qt="t"
        e="e"
-       paddingTop={10}
+       paddingTop={8}
        />
         <section className="flex flex-col items-start justify-around pt-14 pb-20 font-[SourceSans3] md:items-start gap-9 lg:flex-row">
 
            <div className="w-full sm:ml-10 md:ml-3">
-               <h2 className="text-[30px] text-start pl-9 font-black text-[#FFD700] sm:pl-6 md:pl-14 lg:text-[30.8px] lg:pl-16">Contact Luxus</h2>
+               <h2 className="text-[30px] text-start pl-9 font-black text-[#FFD700] sm:pl-6 md:pl-14 lg:text-[30.8px] lg:pl-16">
+                Contact  Luxus
+               </h2>
              </div>
        
             <div className="flex flex-col gap-11 items-center ml-9 sm:gap-8 sm:w-[70%] sm:ml-12 md:ml-10 lg:pt-3 lg:gap-7
              lg:w-[190%] lg:mr-9">
             <div className="flex items-start  ustify-start gap-4 sm:ml-4 md:ml-6 lg:ml-0"> 
                 <img src={mailImg} alt="mail" className="w-[28px] h-[28px]" />
-                <p className="w-[90%] lg:w-[100%]">Please email us, or fill out the enquiry form below and a member of our team will get back to you 
-                shortly. <span  className="text-[#FFD700]">res@Luxus.com.au</span>
+                <p className="w-[90%] lg:w-[100%]">Please email us, or fill out the enquiry form below and a member of our team will get 
+                back to you shortly. <span  className="text-[#FFD700]">res@Luxus.com.au</span>
                 </p>
             </div>
 

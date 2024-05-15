@@ -16,7 +16,7 @@ function AboutUS() {
       <SharedHeaders 
        url={`${transport}`}
        bgPosition="center"
-       height={80}
+       height={75}
        tw={100}
        textW={50}
        title="About Us"

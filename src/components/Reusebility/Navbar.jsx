@@ -53,7 +53,7 @@ function Nav(props) {
             objectFit: 'cover',
           }
       }
-        className={`h-[${props.height}vh] relative md:bg-${props.bgPosition} sm:h-[130vh] md:h-[115vh] lg:h-[115vh]`}
+        className={`h-[143vh ] relative  sm:h-[130vh]  md:bg-${props.bgPosition} md:h-[115vh] lg:h-[115vh]`}
       >
         <div className="bg-[#fff] p-2 bg-opacity-10 md:bg-[#EBE9E9] md:bg-opacity-25 font-[SourceSans3]">
           <nav>
@@ -297,7 +297,7 @@ function Nav(props) {
             {props.text}
           </p>
           <nav>
-            <ul className="flex flex-col gap-4 font-normal pt-10 sm:pt-6 md:pt-10 md:flex-row md:items-center">
+            <ul className="flex flex-col gap-4 font-normal pt-10 pb-8 sm:pt-6 md:pt-10 md:flex-row md:items-center">
               <li className="py-[6px] w-[55%] uppercase bg-[#FFD700] sm:py-[9px] sm:w-[35%] md:py-[12px] md:w-[20%] 
               lg:pt-[10px] lg:w-[15%] rounded text-center">
                  <NavLink to="/book" className="cursor-pointer">

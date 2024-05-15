@@ -13,7 +13,7 @@ function Header() {
       <Navbar 
        url="https://images.pexels.com/photos/8425366/pexels-photo-8425366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
        bgPosition="center"
-       height={150}
+       //height={95}
        title="Australia's Chauffeur Service"
        tw={100}
        tws={100}

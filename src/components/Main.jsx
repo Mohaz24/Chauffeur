@@ -8,7 +8,7 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { AiOutlineMinusCircle } from "react-icons/ai";
 
 
-
+import { NavLink } from "react-router-dom";
 
 
 // FILES
@@ -100,8 +100,8 @@ function showPaymentDetails(navLink){
             sliders1.map((slide) => {
               const sldImg = {
                 background: `url(${slide.url})`,
-                width: '95%',
-                height: '70vh',
+                // width: '95%',
+                // height: '70vh',
                 backgroundPosition: 'center',
                 borderRadius: '10px',
                 backgroundSize: 'cover',
@@ -115,10 +115,10 @@ function showPaymentDetails(navLink){
                 marginLeft: 'auto'
           }
          return  <div className="relative font-[SourceSans3] cursor-pointer">
-                 <div style={sldImg} className="darbg-1 w-[95%] h-[70vh] bg-center">
+                 <div style={sldImg} className="darbg-1 w-[50%] h-[70vh] sm:w-[95%] bg-center cursor-pointer">
       <div onMouseEnter={() => toggleOn(slide.id)} onMouseLeave={() => toggleOff(slide.id)} className="">
         {
-          slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-3 bottom-0 z-10 darkbg font-semibold">
+          slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-1 bottom-0 z-10 darkbg font-semibold sm:left-3">
           <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
           <h3 className="pt-4 text-[#FFD700] text-lg font-black   opacity-1 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
           <p className="w-48 pt-4  text-md text-[#E3E9F1] opacity-8 drop-shadow-xl bg-blend-difference "> {slide.text} </p>

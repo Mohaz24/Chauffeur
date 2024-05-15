@@ -81,7 +81,7 @@ function BookingDetails(props) {
               sedans.map((data) => {
                 const { img, title, subTitle, info, passenger, suitcase, bag, passLenght, suitLenght, baglenght} = data
                 
-                return  <div className="w-[75%] h-[110vh] l mx-auto mt-10 bg-[#fff] flex flex-col items-center
+                return  <div className="w-[75%] h-[105vh]   mx-auto mt-10 bg-[#fff] flex flex-col items-center
                 rounded-md sm:w-[70%] md:w-[65%] md:h-[115vh] lg:h-[55vh] lg:w-[75%]  lg:flex-row"> 
                   <img src={img} alt="sedan" className="h-[120px] pl-2 sm:h-[35%] md:h-[40%]" />
                   <div className="pl-4 md:pl-4">
@@ -127,7 +127,7 @@ function BookingDetails(props) {
               suv.map((data) => {
                 const { img, title, subTitle, info, passenger, suitcase, bag, passLenght, suitLenght, baglenght} = data
                 
-                return  <div className="w-[75%] h-[110vh]  mx-auto mt-10 bg-[#fff] flex flex-col items-center
+                return  <div className="w-[75%] h-[108vh]  mx-auto mt-10 bg-[#fff] flex flex-col items-center
                 rounded-md sm:w-[70%] md:w-[65%] md:h-[120vh] lg:h-[55vh] lg:w-[75%]  lg:flex-row"> 
                   <img src={img} alt="sedan" className="h-[120px] pl-2 sm:h-[35%] md:h-[40%]" />
                   <div className="pl-4 md:pl-4">
@@ -171,7 +171,7 @@ function BookingDetails(props) {
               peopleMovers.map((data) => {
                 const { img, title, subTitle, info, passenger, suitcase, bag, passLenght, suitLenght, baglenght} = data
                 
-                return  <div className="w-[75%] h-[110vh]  mx-auto mt-10 bg-[#fff] flex flex-col items-center
+                return  <div className="w-[75%] h-[108vh]  mx-auto mt-10 bg-[#fff] flex flex-col items-center
                 rounded-md sm:w-[70%] md:w-[65%] lg:h-[55vh] lg:w-[75%] lg:flex-row"> 
                   <img src={img} alt="sedan" className="mt-5 mb-3  h-[90px] pl-2 sm:h-[25%] lg:h-[30%]" />
                   <div className="pl-4 md:pl-4">
@@ -214,9 +214,9 @@ function BookingDetails(props) {
             display === "mn" ? <>
             {
               minibusesCoaches.map((data) => {
-                const { img, title, subTitle, info, passenger, suitcase, bag, passLenght, details, suitLenght, baglenght} = data
+                const { img, title, subTitle, info, passenger, passLenght, details, suitLenght, baglenght} = data
                 
-                return  <div className="w-[75%] h-[100vh]  mx-auto mt-10 bg-[#fff] flex flex-col items-center
+                return  <div className="w-[75%] h-[98vh]  mx-auto mt-10 bg-[#fff] flex flex-col items-center
                 rounded-md sm:w-[70%] sm:h-[115vh] md:w-[65%] md:h-[115vh] lg:h-[55vh] lg:w-[75%]  lg:flex-row"> 
                   <img src={img} alt="sedan" className="mt-5 mb-3 h-[110px] pl-2 sm:h-[35%] lg:h-[40%]" />
                   <div className="pl-4 md:pl-4">

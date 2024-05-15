@@ -27,7 +27,8 @@ function Map(props) {
     <div>
        <section className="bg-gray-100 pb-36  md:pb-28 lg:pb-20">
       <div className="text-center pt-11 pb-5 font-[SourceSans3]">
-          <h1 className={`w-5/6  font-black mx-auto text-[#FFD700] text-[30px] leading-[45.9px] md:w-3/6 md:w-[${props.width}%]  lg:text-[37.4px] `}>
+          <h1 className={`w-5/6  font-black mx-auto text-[#FFD700] text-[30px] leading-[45.9px] md:w-3/6 md:w-[${props.width}%]  
+          lg:text-[37.4px] `}>
              {props.title}
           </h1>
           <p className="pt-7 w-3/5 mx-auto font-extralight sm:w-4/6 md:w-8/12 ">{props.text}</p>
@@ -77,7 +78,7 @@ function Map(props) {
               {/* Bryon bay */}
               {
                       display === "nsw" && <div className="mx-auto pt-10">
-                      <div className="flex items-center justify-between gap-[190px] custom-class-space text-[15px] list-none 
+                      <div className="flex items-center justify-between gap-[195px] custom-class-space text-[15px] list-none 
                       sm:gap-[380px] md:gap-[570px] lg:gap-[490px] lg:w-[100%] lg:pb-3 lg:h-[100%]  lg:justfiy-between">
                        <div>
                        <li className="sm:pb-2 md:pb-4 lg:pt-2">Bryon Bay</li>

@@ -35,7 +35,7 @@ function AirportTrans() {
      <SharedHeaders 
        url="https://images.pexels.com/photos/8424989/pexels-photo-8424989.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
        bgPosition="center"
-       height={100}
+       height={98}
        tw={100}
        textW={50}
        title="Reliable Airport Transfer"

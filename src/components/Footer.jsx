@@ -63,15 +63,15 @@ function Footer() {
        </nav>
       </div>
 
-      <div className="pl-6 sm:pl-7 pt-6">
+      <div className="pl-6  sm:pl-7 pt-6">
        <h2 className="pb-4">SECURE PAYMENTS</h2>
        <img src={paymentImg} alt="cards" className="w-[250px] bg-transparent opacity-1" />
        <div >
         <h2 className="pt-3">LET'S STAY CONNECTED</h2>
-         <div className="flex items-center justify-around gap-7 w-[28px] h-[28px] sm:w-[30px] sm:h-[30px] mt-6 cursor-pointer">
-          <img src={link} alt="linkiden" />
-          <img src={fb} alt="facebook" />
-          <img src={insta} alt="instagram" />
+         <div className="flex items-center ml-1 gap-7 mt-6 cursor-pointer sm:w-[30px] sm:h-[30px]">
+          <img src={link} alt="linkden"  className=" w-[28px] h-[28px]" />
+          <img src={fb} alt="facebook"   className=" w-[28px] h-[28px]" />
+          <img src={insta} alt="instagram" className=" w-[28px] h-[28px]"/>
          </div>
        </div>
       </div>

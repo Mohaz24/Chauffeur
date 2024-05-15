@@ -12,7 +12,7 @@ function JoinTheFleet() {
        <SharedHeaders 
        url="https://images.pexels.com/photos/7792744/pexels-photo-7792744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
        bgPosition="center"
-       height={80}
+       height={90}
        tw={100}
        textW={50}
        title="Join The Fleet"

@@ -163,7 +163,7 @@ function BookNow() {
 
        {/* CONTENT */}
        <main className="pt-10 pb-64 h-[140vh] bg-gray-100 rounded-xl w-[100%] font-[SourceSans3] sm:h-[145vh] md:h-[130vh] md:pb-60 ">
-          <section className="w-[100%] relative h-[60vh] px-4 bg-[#151515] rounded-2xl mx-auto  md:w-[85%] md:h-[50vh] ">
+          <section className="w-[100%] relative h-[55vh] px-4 pb-28 bg-[#151515] rounded-2xl mx-auto  md:w-[85%] md:h-[50vh] ">
           <div className="grid grid-cols-2 md:grid-cols-1">
           <div className="flex flex-col items-start pt-4 md:flex-row lg:items-center">
             <div className=" md:pl-2">
@@ -205,24 +205,40 @@ function BookNow() {
         <hr className="border-1 border-gray-100 w-[170%] md:w-[97%] mt-8 ml-4" />
         </div>
 
-       <div className="grid grid-cols-1 gap-6 mt-14 md:mt-24 md:grid-cols-2 md:gap-8">
-       <div className="pt-6 pl-1">
+       <div className="grid grid-cols-1 gap-6 mt-16 md:mt-24 md:grid-cols-2 md:gap-8">
+       <div className="pt-11 mt-2 pl-1">
             <div>
             <label htmlFor="date" className="text-[#FFD700] pb-4">DATE</label>
             </div>
-            <input type="date" name="date" id="date" 
-              className="mt-4 w-[90%] text-black py-[10px] px-5 rounded-xl sm:w-[60%] md:w-[100%]  placeholder:text-[16px]" 
+            <input 
+            type="text" 
+            name="date"
+            id="date" 
+            placeholder="Enter date..."
+            onChange={(e) => console.log(e.target.value)}
+            onFocus={(e) => (e.target.type = 'date')}
+            onMouseEnter={(e) => (e.target.type = 'date')}
+            onBlur={(e) => (e.target.type = 'text')}
+            className="mt-4 w-[90%] text-black bg-white py-[10px] px-5 rounded-xl 
+            placeholder:text-[16px] placeholder-[#000] sm:w-[60%] md:w-[100%]" 
             />
           </div>
 
-          <div className="pt-2 sm:pl-1 sm:pt-3 md:pt-6 ">
+          <div className="pt-0 sm:pl-1 sm:pt-3 md:pt-11 ">
             <div>
             <label htmlFor="time" className="text-[#FFD700] pb-4 ">TIME</label>
             </div>
-            <input type="time" name="time" id="time" 
-              placeholder="Time"
-              className="mt-4 w-[80%] text-black py-[10px] px-5 rounded-xl placeholder:text-[16px] sm:w-[40%] 
-              md:w-[60%] lg:w-[60%]" 
+            <input 
+            type="text" 
+            name="time" 
+            id="time" 
+            placeholder="Enter time..."
+            onChange={(e) => console.log(e.target.value)}
+            onFocus={(e) => (e.target.type = 'time')}
+            onMouseEnter={(e) => (e.target.type = 'time')}
+            onBlur={(e) => (e.target.type = 'text')}
+            className="mt-4 w-[80%] text-black bg-white px-4 py-[10px] rounded-xl placeholder:text-[16px] 
+            placeholder-[#000] sm:w-[40%] md:w-[60%] lg:w-[60%]" 
             />
           </div>
 

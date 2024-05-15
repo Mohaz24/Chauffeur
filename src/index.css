@@ -369,13 +369,13 @@ body{
 @media (400px <= width <= 500px) {
 
   .c-bg-h{
-   height: 250vh;
+   height: 230vh;
   }
   .c-w-h{
    width: 355px;
    position: absolute;
    right: 30px;
-   bottom: 18px;
+   /* bottom: 10px; */
   }
 
   .c-i-box{
@@ -393,6 +393,10 @@ body{
    padding-left: 1.5rem;
   }
 
+  /* .f-pad-l{
+    padding-left: 1.4rem;
+  } */
+
   .c-w-btn{
     padding: 8px 9px;
     width: 40%;
@@ -403,11 +407,16 @@ body{
    grid-template-columns: 1fr;
   }
 
+  /* .f-i-s{
+    width: 30px;
+    height: 30px;
+  } */
+
 }
 
 
 /* !====== SMALL DEVICES !====== */
-@media (386px <= width <= 399px) {
+/* @media (386px <= width <= 399px) {
   body{
     width: 110vw;
   }
@@ -445,11 +454,11 @@ body{
    display: grid;
    grid-template-columns: 1fr;
   }
-}
+} */
 
 
 
-@media (300px <= width <= 414px) {
+@media (300px <= width <= 399px) {
   .custom-class-nav{
     padding-left: 2px;
     font-size: 14px;

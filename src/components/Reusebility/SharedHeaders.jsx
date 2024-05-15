@@ -296,7 +296,7 @@ function SharedHeaders(props) {
             </>
           </div>
         </nav>
-        <div className={`text-[#fff] pl-9 font-[SourceSans3] sm:pl-14 md:pl-20 lg:pl-20 pt-${props.paddingTop} sm:pt-10 
+        <div className={`text-[#fff] pl-9 font-[SourceSans3] pt-${props.paddingTop} lg:pl-20  sm:pl-14 md:pl-20  sm:pt-10 
         md:pt-${props.paddingTopMd}  lg:pt-${props.paddingTopLg}`}>
           <h1 className={`text-[30px] leading-[1.2] w-[85%] lg:w-[${props.tw}%] font-semibold md:text-[50px] `} >
             {props.title}
@@ -305,7 +305,7 @@ function SharedHeaders(props) {
             {props.text}
           </p>
           <nav>
-            <ul className="flex flex-col gap-4 font-normal pt-10 sm:pt-6 sm:flex-row md:pt-10 md:flex-row md:items-center">
+            <ul className="flex flex-col gap-4 font-normal pt-10 pb-20 sm:pt-6 sm:flex-row md:pt-10 md:flex-row md:items-center">
             <li className="py-[6px] w-[55%] uppercase bg-[#FFD700] sm:py-[9px] sm:w-[25%] md:py-[12px] md:w-[20%] 
               lg:pt-[10px] lg:w-[15%] rounded text-center">
                 <NavLink to="/book" className="cursor-pointer">
