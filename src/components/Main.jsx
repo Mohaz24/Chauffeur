@@ -115,10 +115,10 @@ function showPaymentDetails(navLink){
                 marginLeft: 'auto'
           }
          return  <div className="relative font-[SourceSans3] cursor-pointer">
-                 <div style={sldImg} className="darbg-1 w-[50%] h-[70vh] sm:w-[95%] bg-center cursor-pointer">
+                 <div style={sldImg} className="darbg-1 w-[55%] h-[75vh] sm:w-[95%] bg-center cursor-pointer">
       <div onMouseEnter={() => toggleOn(slide.id)} onMouseLeave={() => toggleOff(slide.id)} className="">
         {
-          slide.isTrue ? <div className="flex flex-col items-start absolute top-20 left-1 bottom-0 z-10 darkbg font-semibold sm:left-3">
+          slide.isTrue ? <div className="flex flex-col items-start absolute top-16 left-1 bottom-0 z-10 darkbg font-semibold sm:left-3">
           <img src={slide.icon} alt="icons"className="w-[50px] h-[50px]" />
           <h3 className="pt-4 text-[#FFD700] text-lg font-black   opacity-1 drop-shadow-xl bg-blend-difference ">{slide.title}</h3>
           <p className="w-48 pt-4  text-md text-[#E3E9F1] opacity-8 drop-shadow-xl bg-blend-difference "> {slide.text} </p>
@@ -218,12 +218,12 @@ function showPaymentDetails(navLink){
         >
           {
             sliders2.map((slide) => {
-           return <div className="font-[SourceSans3] cursor-pointer font-black w-full">
-          <div className="flex flex-col items-start">
-            <img src={slide.url} alt="images"  className="w-full h-[70vh] object-cover" />
-            <h3 className="pt-4 text-[#FFD700]">{slide.title}</h3>
+            return <div className="font-[SourceSans3] cursor-pointer font-black w-full">
+            <div className="flex flex-col items-start">
+              <img src={slide.url} alt="images"  className="w-full h-[70vh] object-cover " />
+              <h3 className="pt-4 text-[#FFD700]">{slide.title}</h3>
+              </div>
             </div>
-           </div>
             })
           }
         </Flickity>

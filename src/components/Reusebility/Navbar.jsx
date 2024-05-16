@@ -53,7 +53,7 @@ function Nav(props) {
             objectFit: 'cover',
           }
       }
-        className={`h-[143vh ] relative  sm:h-[130vh]  md:bg-${props.bgPosition} md:h-[115vh] lg:h-[115vh]`}
+        className={`h-[150vh] relative  sm:h-[130vh]  md:bg-${props.bgPosition} md:h-[115vh] lg:h-[115vh]`}
       >
         <div className="bg-[#fff] p-2 bg-opacity-10 md:bg-[#EBE9E9] md:bg-opacity-25 font-[SourceSans3]">
           <nav>

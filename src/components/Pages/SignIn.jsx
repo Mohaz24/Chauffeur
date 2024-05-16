@@ -197,10 +197,10 @@ function SignIn() {
              <a href="#" className="bg-[#FFD700] text-white px-[9px] py-[8px] rounded-lg hover:text-[#000] ml-2">+61 4495 3030</a>
             </div>
           </div>
-          <div className="w-[85%] mx-auto mt-14 cursor-pointer  pb-16 mb-29 lg:w-[40%]">
+          <div className="flex justify-center w-[85%] mx-auto mt-14 cursor-pointer  pb-16 mb-29 lg:w-[40%]">
           <a 
           onClick={() => showPage("login")}
-          className="bg-[#FFD700] custom-class-login-padds text-center text-lg  text-white px-[65px] py-[10px] hover:text-[#000]
+          className="bg-[#FFD700] custom-class-login-padds text-center text-lg  text-white px-[32px] py-[6px] hover:text-[#000]
          sm:ml-24  md:ml-32 lg:ml-0">
             Sign into your Luxus account
           </a>
@@ -236,7 +236,6 @@ function SignIn() {
          {
             show === "login" ? <section className="pt-0 font-[SourceSans3] w-[80%] mt-8 mx-auto h-[65vh] border-[1px]  
             rounded-sm lg:w-[40%]">  
-            
             <div className="bg-[#FFD700] mt-0 py-2 px-4 font-black">
             <h2 className="text-md text-white text-[20px]">Your Details</h2>
          </div>
@@ -286,7 +285,7 @@ function SignIn() {
          {/* SIGN UP */}
 
         {
-            show === "signup" ? <section className="pt-0  font-[SourceSans3] w-[86%] mt-8 mx-auto h-[230vh] border-[1px]  mb-10
+            show === "signup" ? <section className="pt-0  font-[SourceSans3] w-[86%] mt-8 mx-auto h-[223vh] border-[1px]  mb-10
         rounded-sm  sm:h-[235vh] md:h-[175vh] lg:h-[160vh] lg:w-[45%] ">  
             
             <div className="bg-[#FFD700] mt-0 py-2 px-4 font-black text-center">
