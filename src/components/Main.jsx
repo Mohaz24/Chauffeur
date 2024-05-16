@@ -115,7 +115,7 @@ function showPaymentDetails(navLink){
                 marginLeft: 'auto'
           }
          return  <div className="relative font-[SourceSans3] cursor-pointer">
-                 <div style={sldImg} className="darbg-1 w-[55%] h-[75vh] sm:w-[95%] bg-center cursor-pointer">
+                 <div style={sldImg} className="darbg-1 w-[55%] h-[70vh] sm:w-[95%] bg-center cursor-pointer">
       <div onMouseEnter={() => toggleOn(slide.id)} onMouseLeave={() => toggleOff(slide.id)} className="">
         {
           slide.isTrue ? <div className="flex flex-col items-start absolute top-16 left-1 bottom-0 z-10 darkbg font-semibold sm:left-3">

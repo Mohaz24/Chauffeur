@@ -234,8 +234,8 @@ function SignIn() {
  
        {/* FORM */}
          {
-            show === "login" ? <section className="pt-0 font-[SourceSans3] w-[80%] mt-8 mx-auto h-[65vh] border-[1px]  
-            rounded-sm lg:w-[40%]">  
+            show === "login" ? <section className="pt-0 font-[SourceSans3] w-[80%] mt-8 mx-auto h-[64vh] border-[1px]  
+            rounded-sm sm:h-[65vh] lg:h-[59vh] lg:w-[40%]">  
             <div className="bg-[#FFD700] mt-0 py-2 px-4 font-black">
             <h2 className="text-md text-white text-[20px]">Your Details</h2>
          </div>
@@ -285,8 +285,8 @@ function SignIn() {
          {/* SIGN UP */}
 
         {
-            show === "signup" ? <section className="pt-0  font-[SourceSans3] w-[86%] mt-8 mx-auto h-[223vh] border-[1px]  mb-10
-        rounded-sm  sm:h-[235vh] md:h-[175vh] lg:h-[160vh] lg:w-[45%] ">  
+            show === "signup" ? <section className="pt-0  font-[SourceSans3] w-[86%] mt-8 mx-auto h-[223vh] border-[1px] mb-10
+        rounded-sm  sm:h-[235vh] md:h-[160vh] lg:h-[150vh] lg:w-[45%] ">  
             
             <div className="bg-[#FFD700] mt-0 py-2 px-4 font-black text-center">
             <h2 className="text-md text-white text-[20px]">Client Portal Sign Up</h2>
