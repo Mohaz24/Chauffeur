@@ -76,21 +76,19 @@ body{
   }
 }
 
+
+/* TRANSITION */
+.custom-class-trans{
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
 .trans-y{
   transform-style: preserve-3d;
   transform: translateX(-50%) translateY(-50%) translateZ(0);
   transition: margin .2s ease, transform .2s ease 1s, opacity .3s ease;
 }
 
-.t-s-e{
-  transition: 0.5s ease-in-out;
-}
-/* TRANSTITONS */
-.tr-s-e:hover{
-  background-color: #161614;
-  transition: background-color 0.4s ease-in-out;
-  opacity: 1;
-}
 
 /* CUSTOM CSS CLASSES */
 /* ======= HEADER =========== */
@@ -393,9 +391,6 @@ body{
    padding-left: 1.5rem;
   }
 
-  /* .f-pad-l{
-    padding-left: 1.4rem;
-  } */
 
   .c-w-btn{
     padding: 8px 9px;
@@ -407,54 +402,8 @@ body{
    grid-template-columns: 1fr;
   }
 
-  /* .f-i-s{
-    width: 30px;
-    height: 30px;
-  } */
-
 }
 
-
-/* !====== SMALL DEVICES !====== */
-/* @media (386px <= width <= 399px) {
-  body{
-    width: 110vw;
-  }
-  .c-bg-h{
-   height: 260vh;
-  }
-  .c-w-h{
-   width: 355px;
-   position: absolute;
-   right: 60px;
-   bottom: 10px;
-  }
-
-  .c-i-box{
-   display: flex;
-   flex-direction: column;
-   align-items: start;
-  }
-
-  .c-w-t{
-   width: 100%;
-   padding-left: 1rem;
-  }
-
-  .c-p-l {
-   padding-left: 1.5rem;
-  }
-
-  .c-w-btn{
-    padding: 8px 9px;
-    width: 70%;
-  }
-
-  .g-c-1{
-   display: grid;
-   grid-template-columns: 1fr;
-  }
-} */
 
 
 

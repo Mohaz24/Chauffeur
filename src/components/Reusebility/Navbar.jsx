@@ -113,15 +113,15 @@ function Nav(props) {
                  <>
                   <div
                     className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16  custom-class-trans cursor-pointer lg-hidden"
+                    flex-col items-center gap-10 pt-16 cursor-pointer lg-hidden"
                   >
-                  <div className= "lg:hidden">
+                  <div className="lg:hidden">
                   <CgClose
                     onClick={() => toggleNavbar("close")}
                     className={`absolute top-6 right-14  text-[#fff] w-[25px] h-[25px] 
-                    sm:right-24 sm:top-7 md:right-28 cursor-pointer custom-class-close`}
+                    cursor-pointer custom-class-close custom-class-trans sm:right-24 sm:top-7 md:right-28`}
                   />
-                    <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10">
+                    <ul className="flex flex-col items-center gap-2 text-[#fff] text-[18px] z-10 ">
                       <NavLink
                       to="/accounts"
                       className={({isActive})  => isActive ? "active-links" : ""}

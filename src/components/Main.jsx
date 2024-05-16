@@ -210,11 +210,11 @@ function showPaymentDetails(navLink){
          
          <div  className="lg:hidden mt-20"> 
          <Flickity
-        className={'carousel'} // default ''
-        elementType={'div'} // default 'div'
-        options={flickityOptions2} // takes flickity options {}
-        disableImagesLoaded={false} // default false
-        static // default false
+          className={'carousel'} // default ''
+          elementType={'div'} // default 'div'
+          options={flickityOptions2} // takes flickity options {}
+          disableImagesLoaded={false} // default false
+          static // default false
         >
           {
             sliders2.map((slide) => {
@@ -266,8 +266,8 @@ function showPaymentDetails(navLink){
                <h1 className="font-[SourceSans3] font-semibold text-[#FFD700] text-[30px] leading-[45.9px] lg:text-[37.4px]">FAQ</h1>
             </div>
             {
-              show === "cap" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] custom-class-trans">
-              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl 
+              show === "cap" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3]">
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl custom-class-trans
               sm:w-10/12 md:text-center md:w-9/11 "> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 
@@ -282,7 +282,7 @@ function showPaymentDetails(navLink){
                passengers.</p>
             </div> 
             </div> : <div className="pt-11 custom-class-width w-10/12 mx-auto">
-                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
+                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 custom-class-trans sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
                         What Is The Seating Capacity Of Your Chauffeured Cars?
@@ -298,7 +298,7 @@ function showPaymentDetails(navLink){
             {/* PAY PAYMENT */}
             {
               show === "pay" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] ">
-              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in 
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl custom-class-trans
               sm:w-10/12 md:text-center md:w-9/11"> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 
@@ -311,7 +311,7 @@ function showPaymentDetails(navLink){
              set up  through our website and offer generous corporate rates.</p>
             </div> 
             </div> : <div className="pt-11 custom-class-width w-10/12 mx-auto">
-                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
+                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 custom-class-trans sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
                        How Can I Pay For A Chauffeured Car From Luxus?
@@ -327,9 +327,9 @@ function showPaymentDetails(navLink){
 
            {/* CANCEL PAYMENT */}
            
-          { show === "cancell" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] t-s-e">
-              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl sm:w-10/12 md:text-center 
-              md:w-9/11"> 
+          { show === "cancell" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3]">
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl custom-class-trans
+              sm:w-10/12 md:text-center md:w-9/11"> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 md:w-auto 
                 md:text-[25px] md:leading-[45.9px]">
@@ -343,7 +343,7 @@ function showPaymentDetails(navLink){
               passenger. The notice periods differ depending on location, vehicle and event type. View our cancellation policy here.</p>
             </div> 
             </div> : <div className="pt-11 custom-class-width w-10/12 mx-auto">
-                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
+                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 custom-class-trans sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
                         Does Luxus Charge Cancellation Fees?
@@ -360,7 +360,7 @@ function showPaymentDetails(navLink){
            {/* BOOKINGS */}
              
           { show === "book" ?  <div className="flex items-center justify-between pt-4 font-[SourceSans3] ">
-              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl transition-all ease-in 
+              <div className="w-full custom-class-card mx-auto py-5 px-4 bg-white text-start shadow-xl custom-class-trans
               sm:w-10/12 md:text-center md:w-9/11"> 
               <div className="flex items-center justify-between">
                 <h2 className="text-[#FFD700] w-2/4 cursor-pointer hover:text-[#FFD700] text-[20px] font-semibold sm:w-2/3 
@@ -373,7 +373,7 @@ function showPaymentDetails(navLink){
              but we offer same-day services too.</p>
             </div> 
             </div> :<div className="pt-11 custom-class-width w-10/12 mx-auto">
-                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 sm:gap-0">
+                  <div className="font-[SourceSans3] flex justify-between items-center gap-5 custom-class-trans sm:gap-0">
                       <h2 className=" text-[#000] text-start cursor-pointer hover:text-[#FFD700]  font-semibold text-[20px] md:text-[25px]  
                       md:leading-[45.9px]">
                         How Far In Advance Can I Book With Luxus?
