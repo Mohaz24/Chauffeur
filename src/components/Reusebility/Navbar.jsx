@@ -37,6 +37,10 @@ function Nav(props) {
         window.removeEventListener("scroll", handleScroll);
       };
     }, []);
+
+    useEffect(() => {
+      
+    },[])
   
     function toggleNavbar(toggle) {
       setOn(toggle);
@@ -112,8 +116,8 @@ function Nav(props) {
               {on === "open" ? (
                  <>
                   <div
-                    className="font-[SourceSans3] fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] flex
-                    flex-col items-center gap-10 pt-16 cursor-pointer lg-hidden"
+                    className="font-[SourceSans3] bg-mobile-animation-close fixed top-0 left-0 bottom-0 right-0 z-10 m-auto opacity-95 bg-[#ABAE29] 
+                    flex flex-col items-center gap-10 pt-16 cursor-pointer lg-hidden"
                   >
                   <div className="lg:hidden">
                   <CgClose
@@ -199,7 +203,7 @@ function Nav(props) {
                 <div className="lg:hidden">
                   <HiMiniBars3BottomLeft
                     onClick={() => toggleNavbar("open")}
-                    className="absolute cursor-pointer top-6 right-14 z-[999] text-white w-[25px] h-[25px] custom-class-open 
+                    className="absolute cursor-pointer top-6 right-14 z-[999] bg-mobile-animation-open  text-white w-[25px] h-[25px] custom-class-open 
                     sm:right-24 sm:top-7"
                   />
                   <div className="hidden"></div>

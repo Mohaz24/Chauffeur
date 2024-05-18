@@ -61,6 +61,14 @@ body{
   animation-delay: calc(var(--i) * 0.075s);
 }
 
+ .bg-mobile-animation-close{
+  animation: spin .5s .3s;
+ }
+
+ .bg-mobile-animation-open{
+  animation: ping .6s;
+ }
+
 @keyframes gradient {
   90% {
       background-color: none;
@@ -76,6 +84,21 @@ body{
   }
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 
 /* TRANSITION */
 .custom-class-trans{
@@ -226,6 +249,8 @@ body{
 /* ACTIVE LINK */
 .active-links{
   text-decoration: underline #fff;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .space-y{
